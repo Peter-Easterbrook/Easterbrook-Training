@@ -269,7 +269,6 @@ p {
 /*---------About section---------------*/
 .scale {
   perspective: 1000px;
-  will-change: transform;
 }
 .one {
   color: #f7f7f7;
@@ -393,7 +392,6 @@ p {
 .cards {
   display: flex;
   flex-wrap: nowrap;
-  will-change: transform;
 }
 .priceCard ul {
   list-style-type: circle;
