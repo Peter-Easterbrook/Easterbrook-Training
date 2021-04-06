@@ -1,0 +1,21 @@
+{
+  "name": "EasterbrookTraining",
+  "short_name": "Easterbrook",
+  "description": "Englische Sprachdienstleistungen",
+  "start_url": "index.html",
+  "icons": [
+    {
+      "src": "/img/SLL.png",
+      "type": "image/png",
+      "sizes": "280x301"
+    },
+    {
+      "src": "/img/SLL512.png",
+      "type": "image/png",
+      "sizes": "512x550"
+    }
+  ],
+  "background_color": "#9eafc9",
+  "display": "standalone",
+  "theme_color": "#9eafc9"
+}
