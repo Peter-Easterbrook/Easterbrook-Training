@@ -54,8 +54,7 @@
       color="#5bbad5"
     />
 
-    <!-- 
-    <script
+    <!-- <script
       src="https://kit.fontawesome.com/93b32f94da.js"
       crossorigin="anonymous"
     ></script> -->
@@ -66,12 +65,36 @@
     </script>-->
 
     <!--This one links the CSS style sheet-->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="bootstrap.min.css" />
-    <script async src="script.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- <script src="script.js"></script> -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      defer
+      src="https://www.googletagmanager.com/gtag/js?id=UA-158549795-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-158549795-1');
+    </script>
+    <!-- Google Analytics End -->
   </head>
 
   <body>
@@ -145,12 +168,41 @@
 
       <div id="main-content" class="page-sections">
         <section class="page-section">
+          <script>
+            $(document).ready(() => {
+              // Add minus icon for collapse element which is open by default
+              $('.collapse.show').each(function () {
+                $(this)
+                  .prev('.card-header')
+                  .find('.bi')
+                  .addClass('bi-dash-circle')
+                  .removeClass('bi-plus-circle');
+              });
+
+              // Toggle plus minus icon on show hide of collapse element
+              $('.collapse')
+                .on('show.bs.collapse', function () {
+                  $(this)
+                    .prev('.card-header')
+                    .find('.bi')
+                    .removeClass('bi-plus-circle')
+                    .addClass('bi-dash-circle');
+                })
+                .on('hide.bs.collapse', function () {
+                  $(this)
+                    .prev('.card-header')
+                    .find('.bi')
+                    .removeClass('bi-dash-circle')
+                    .addClass('bi-plus-circle');
+                });
+            });
+          </script>
           <h2 class="section-title" id="Dienstleistungen">
             Dienstleistungen<i class="bi bi-bell float-right mr-2"></i>
             <!-- <i class="far fa-bell float-right mr-2 mt-1"></i> -->
           </h2>
-          <!--- Accordion----->
-          <div class="accordion rounded-lg" id="accordion">
+          <!------------------------- Accordion--------------------------->
+          <div class="accordion" id="accordion">
             <!--  <div class="accordion-group">-->
             <div class="card border-light">
               <div class="card-header" id="headingOne">
@@ -166,7 +218,7 @@
                   <h4 class="my-auto">
                     Neu: Online Englischunterricht:
                   </h4></button
-                ><i class="bi bi-arrow-down-circle mt-2 mr-2 float-right"></i>
+                ><i class="bi bi-plus-circle mt-2 mr-2 float-right"></i>
               </div>
               <div
                 id="collapseOne"
@@ -198,7 +250,7 @@
                   aria-controls="collapseTwo"
                 >
                   <h4 class="my-auto">Individuelles Training:</h4></button
-                ><i class="bi bi-arrow-down-circle mt-2 mr-2 float-right"></i>
+                ><i class="bi bi-plus-circle mt-2 mr-2 float-right"></i>
               </div>
               <div
                 id="collapseTwo"
@@ -230,7 +282,7 @@
                   aria-controls="collapseThree"
                 >
                   <h4 class="my-auto">Gruppen Kurse:</h4></button
-                ><i class="bi bi-arrow-down-circle mt-2 mr-2 float-right"></i>
+                ><i class="bi bi-plus-circle mt-2 mr-2 float-right"></i>
               </div>
               <div
                 id="collapseThree"
@@ -262,7 +314,7 @@
                   aria-controls="collapseFour"
                 >
                   <h4 class="my-auto">Kursinhalt:</h4></button
-                ><i class="bi bi-arrow-down-circle mt-2 mr-2 float-right"></i>
+                ><i class="bi bi-plus-circle mt-2 mr-2 float-right"></i>
               </div>
               <div
                 id="collapseFour"
@@ -298,7 +350,7 @@
                   <h4 class="my-auto">
                     Übersetzungen Deutsch - Englisch:
                   </h4></button
-                ><i class="bi bi-arrow-down-circle mt-2 mr-2 float-right"></i>
+                ><i class="bi bi-plus-circle mt-2 mr-2 float-right"></i>
               </div>
               <div
                 id="collapseFive"
@@ -576,14 +628,11 @@
       </footer>
     </main>
     <!-- partial -->
-    <script
-      src="https://code.jquery.com/jquery-3.6.0.min.js"
-      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-      crossorigin="anonymous"
-      rel="preconnect"
-    ></script>
 
-    <script async src="bootstrap.min.js"></script>
-    <!-- <script src="script.js"></script> -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

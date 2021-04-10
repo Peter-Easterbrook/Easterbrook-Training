@@ -1,11 +1,11 @@
-$(document).ready(function () {
+$(document).ready(() => {
   // Add minus icon for collapse element which is open by default
   $('.collapse.show').each(function () {
     $(this)
       .prev('.card-header')
       .find('.bi')
-      .addClass('bi-arrow-up-circle')
-      .removeClass('bi-arrow-down-circle');
+      .addClass('bi-minus-circle')
+      .removeClass('bi-plus-circle');
   });
 
   // Toggle plus minus icon on show hide of collapse element
@@ -14,14 +14,14 @@ $(document).ready(function () {
       $(this)
         .prev('.card-header')
         .find('.bi')
-        .removeClass('bi-arrow-down-circle')
-        .addClass('bi-arrow-up-circle');
+        .removeClass('bi-plus-circle')
+        .addClass('bi-minus-circle');
     })
     .on('hide.bs.collapse', function () {
       $(this)
         .prev('.card-header')
         .find('.bi')
-        .removeClass('bi-arrow-up-circle')
-        .addClass('bi-arrow-down-circle');
+        .removeClass('bi-minus-circle')
+        .addClass('bi-plus-circle');
     });
 });
