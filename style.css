@@ -343,7 +343,7 @@ p {
 
 .logo {
   width: 210px;
-  height: 81px;
+  height: 80px;
   border-radius: 0.5rem;
   transform: perspective(1px) translateZ(0);
   box-shadow: var(--box-shadow);
