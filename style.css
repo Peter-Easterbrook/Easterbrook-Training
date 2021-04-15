@@ -58,7 +58,7 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-  background: var(--scrollbarBG);
+  background: rgba(187, 202, 246);
 }
 body::-webkit-scrollbar-thumb {
   background-color: var(--thumbBG);
