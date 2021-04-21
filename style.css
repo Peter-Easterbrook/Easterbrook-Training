@@ -264,6 +264,9 @@ p {
   color: #f7f7f7;
   transition: all 0.2s ease-in;
 }
+.card-header button:focus {
+  box-shadow: none !important;
+}
 
 /*---------About section---------------*/
 .scale {
