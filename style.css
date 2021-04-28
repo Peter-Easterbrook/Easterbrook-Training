@@ -438,7 +438,7 @@ p {
   transition: transform 0.5s ease;
 }
 .form-container:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 .custom-btn[type='submit'] {
   background: rgb(104, 113, 135);
