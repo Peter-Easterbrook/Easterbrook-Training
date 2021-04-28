@@ -95,7 +95,7 @@ main {
   cursor: pointer;
 }
 
-#box-container {
+.box-container {
   align-items: center;
   margin: auto;
   text-shadow: var(--text-shadow);
@@ -108,7 +108,6 @@ main {
 h1,
 h2,
 h3 {
-  font-weight: normal;
   line-height: 1.25;
 }
 p {
@@ -120,11 +119,11 @@ p {
     padding-left: 12%;
     padding-right: 12%;
   }
-  h1 {
-    font-size: 400%;
+  .title {
+    font-size: 3.5rem;
   }
 
-  h2 {
+  .subtitle {
     font-size: 2.25rem;
   }
 
@@ -175,7 +174,7 @@ p {
 }
 
 .placeholder-section {
-  display: -webkit-box;
+  /* display: -webkit-box; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -542,9 +541,12 @@ a:link {
   transform: rotateY(180deg);
   cursor: url(img/glove2.png), auto;
 }
-@media screen and (max-width: 1400px) {
-  h1 {
-    font-size: 300%;
+@media screen and (max-width: 1199px) {
+  .title {
+    font-size: 3rem;
+  }
+  .subtitle {
+    font-size: 2rem;
   }
   .shield-top {
     transition: transform 1s;
@@ -558,21 +560,19 @@ a:link {
     width: 90px;
     height: auto;
   }
-  h2 {
-    font-size: 1.75rem;
-  }
 }
 
 @media screen and (max-width: 860px) {
   #main-content,
   html {
-    font-size: large;
     justify-content: center;
     color: #fffff0;
   }
-  h1 {
-    font-size: 200%;
-    color: #000;
+  .title {
+    font-size: 2.5rem;
+  }
+  .subtitle {
+    font-size: 1.5rem;
   }
   .shield-top {
     transition: transform 1s;
@@ -585,9 +585,6 @@ a:link {
     margin: 2% 0%;
     width: 80px;
     height: auto;
-  }
-  h2 {
-    font-size: 1.3rem;
   }
   .cards {
     overflow-x: scroll;
@@ -633,13 +630,12 @@ a:link {
 @media screen and (max-width: 600px) {
   #main-content,
   html {
-    font-size: large;
     justify-content: center;
     color: #fffff0;
   }
-  h1 {
+  /* h1 {
     font-size: 140%;
-  }
+  } */
   .shield-top {
     transition: transform 1s;
     width: 110px;
