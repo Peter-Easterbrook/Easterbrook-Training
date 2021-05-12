@@ -635,9 +635,7 @@ a:link {
     justify-content: center;
     color: #fffff0;
   }
-  /* h1 {
-    font-size: 140%;
-  } */
+
   .shield-top {
     transition: transform 1s;
     width: 110px;
@@ -648,9 +646,7 @@ a:link {
     margin: 2% 0%;
     width: 70px;
   }
-  h2 {
-    font-size: 1.2rem;
-  }
+
   .form-container {
     margin-right: 2%;
     margin-left: 2%;
@@ -667,5 +663,39 @@ a:link {
     width: 80px;
     height: 80px;
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
+}
+@media screen and (max-width: 400px) {
+  .title {
+    font-size: 2rem;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+  }
+  .subtitle {
+    font-size: 1.4rem;
+  }
+  .section-title {
+    font-size: 1.6rem;
+  }
+  .my-auto {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 350px) {
+  .title {
+    font-size: 1.8rem;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+  }
+  .subtitle {
+    font-size: 1.4rem;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
   }
 }
