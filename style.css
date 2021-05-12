@@ -121,6 +121,7 @@ p {
   }
   .title {
     font-size: 3.5rem;
+    hyphens: auto;
   }
 
   .subtitle {
@@ -570,6 +571,7 @@ a:link {
   }
   .title {
     font-size: 2.5rem;
+    hyphens: auto;
   }
   .subtitle {
     font-size: 1.5rem;
