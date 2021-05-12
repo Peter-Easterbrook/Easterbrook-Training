@@ -121,11 +121,18 @@ p {
   }
   .title {
     font-size: 3.5rem;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
     hyphens: auto;
   }
 
   .subtitle {
     font-size: 2.25rem;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
   }
 
   h3 {
