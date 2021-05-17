@@ -274,6 +274,9 @@ p {
 .card-header button:focus {
   box-shadow: none !important;
 }
+.flag {
+  width: 2rem;
+}
 
 /*---------About section---------------*/
 .scale {
