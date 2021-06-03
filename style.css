@@ -7,8 +7,8 @@
   --box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
   --text-shadow: rgba(0, 0, 0, 0.2) 2px 6px 5px,
     rgba(255, 255, 255, 0.4) 0 -4px 30px;
-  --scrollbarBG: #e3e0cf;
-  --thumbBG: #44555d;
+  --scrollbarBG: #fffff0;
+  --thumbBG: #687187;
 }
 
 html {
@@ -58,7 +58,7 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-  background: rgba(187, 202, 246);
+  background: var(--scrollbarBG);
 }
 body::-webkit-scrollbar-thumb {
   background-color: var(--thumbBG);
@@ -549,6 +549,7 @@ a:link {
   transform: rotateY(180deg);
   cursor: url(img/glove2.png), auto;
 }
+
 @media screen and (max-width: 1199px) {
   .title {
     font-size: 3rem;
