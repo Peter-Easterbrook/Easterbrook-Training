@@ -14,7 +14,7 @@
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
-  scroll-padding-top: 5vh;
+  scroll-padding-top: 5rem;
   scroll-snap-type: y proximity;
   scrollbar-width: thin;
   scrollbar-color: var(--thumbBG) var(--scrollbarBG);
@@ -205,11 +205,11 @@ p {
 }
 
 .page-section > * + * {
-  margin-top: calc(var(--space) * 1.5);
+  margin-top: calc(var(--space) * 2);
 }
 
 .section-title {
-  margin-bottom: 50px;
+  margin-bottom: 3rem;
   color: #000;
   padding: 10px;
   border: 1px solid #f7f7f7;
