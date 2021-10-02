@@ -398,7 +398,8 @@ p {
   text-align: left;
   border-radius: 0.5rem;
   padding-right: 1rem;
-  box-shadow: var(--box-shadow);
+  /* box-shadow: var(--box-shadow); */
+  box-shadow: -2rem 0 3rem -2rem #000;
   transition: 0.2s ease-out;
 }
 .cards {
