@@ -496,7 +496,7 @@ p {
 
 .priceCard ul li::marker {
   font-size: 1rem;
-  color: #fffff0;
+  color: #000;
 }
 
 .priceCard:not(:first-child) {
