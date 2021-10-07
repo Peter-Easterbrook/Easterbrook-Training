@@ -212,12 +212,12 @@ p {
   margin-bottom: 3rem;
   color: #000;
   padding: 10px;
-  border: 1px solid #f7f7f7;
+  border: 1px solid #fffff0;
   border-radius: 0.5rem;
   text-shadow: var(--text-shadow);
   box-shadow: var(--box-shadow);
   background: linear-gradient(
-    180deg,
+    0deg,
     #4b6587,
     #5d7599,
     #6f85ab,
@@ -226,13 +226,15 @@ p {
     #a7b8e3,
     #bbcaf6
   );
+  transition: all 0.2s ease-in;
 }
 
 .section-title:hover {
   color: #fffff0;
+  font-weight: lighter;
+  background: #4b6587;
   border: 1px solid #666;
-  transition: all 0.2s ease-in;
-  box-shadow: 0px 5px 5px 0px rgba(255, 255, 240, 1);
+  box-shadow: 0px 2px 2px 4px rgba(255, 255, 240, 0.4);
   cursor: pointer;
 }
 /* Accordion---------------------*/
@@ -244,7 +246,7 @@ p {
 .card-header {
   color: #000;
   background: linear-gradient(
-    180deg,
+    0deg,
     #4b6587,
     #5d7599,
     #6f85ab,
@@ -269,13 +271,13 @@ p {
 }
 
 .my-auto:hover {
-  color: #f7f7f7;
+  color: #fffff0;
   transition: all 0.2s ease-in;
   cursor: pointer;
 }
 
 .accordion:hover {
-  color: #f7f7f7;
+  color: #fffff0;
   transition: all 0.2s ease-in;
 }
 .card-header button:focus {
@@ -290,22 +292,22 @@ p {
   perspective: 1000px;
 }
 .one {
-  color: #f7f7f7;
+  color: #fffff0;
   font-weight: lighter;
-  border: 0.5px solid #f7f7f7;
+  border: 0.5px solid #fffff0;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.19), 0 3px 3px rgba(0, 0, 0, 0.23);
   padding: 10px;
   border-radius: 0.5rem;
   background: #4b6587;
   font-weight: lighter;
   cursor: pointer;
-  transition: all 0.7s ease-out;
+  transition: all 0.4s ease-in;
   font-smooth: always;
 }
 @media screen and (min-width: 769px) {
   .one:hover {
     color: #191c20;
-    background: #dee5fb;
+    background: #fffff0;
     border: 0.5px solid #6a7a8d;
     transform: scale(1.2);
     box-shadow: var(--box-shadow);
@@ -462,7 +464,7 @@ p {
 .priceCard {
   width: 300px;
   max-height: 600px;
-  border: 1px solid #f7f7f7;
+  border: 1px solid #fffff0;
   background: linear-gradient(
     180deg,
     #fffff0,
@@ -494,7 +496,7 @@ p {
 
 .priceCard ul li::marker {
   font-size: 1rem;
-  color: #f7f7f7;
+  color: #fffff0;
 }
 
 .priceCard:not(:first-child) {
@@ -516,7 +518,7 @@ p {
 
 .form-container {
   background: linear-gradient(
-    180deg,
+    0deg,
     #4b6587,
     #5d7599,
     #6f85ab,
@@ -539,7 +541,7 @@ p {
 }
 .custom-btn[type='submit'] {
   background: linear-gradient(
-    180deg,
+    0deg,
     #4b6587,
     #5d7599,
     #6f85ab,
@@ -560,7 +562,7 @@ p {
 .custom-btn[type='submit']:hover,
 .custom-btn[type='submit']:focus {
   box-shadow: none;
-  background-color: #f7f7f7;
+  background-color: #fffff0;
   color: #000;
   outline: 0;
 }
