@@ -489,6 +489,7 @@ p {
 }
 .priceCard ul {
   list-style-type: circle;
+  color: #000;
 }
 
 .priceCard ul li::marker {
