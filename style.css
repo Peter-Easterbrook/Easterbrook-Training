@@ -4,7 +4,7 @@
 :root {
   --space: 1rem;
   --page-width: 80ch;
-  --box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+  --box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1);
   --text-shadow: rgba(0, 0, 0, 0.2) 2px 6px 5px,
     rgba(255, 255, 255, 0.4) 0 -4px 30px;
   --scrollbarBG: #b7c6f1;
@@ -351,8 +351,13 @@ p {
 
 .grid-container {
   max-width: var(--page-width);
-  margin: auto;
+  margin: 0 auto;
   margin-bottom: 3rem;
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  /* grid-gap: 20px 15px; */
 }
 
 .logo:hover {
@@ -418,15 +423,7 @@ p {
   box-shadow: 0px 5px 5px 0px rgba(255, 255, 240, 1);
   cursor: pointer;
 }
-.grid-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  grid-gap: 20px 15px;
-}
+
 /*-------------Price Cards------------*/
 .priceSection {
   background: linear-gradient(
@@ -661,6 +658,10 @@ a:link {
     width: 90px;
     height: auto;
   }
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-rows: repeat(3, 1fr); */
+  }
 }
 
 @media screen and (max-width: 860px) {
@@ -763,6 +764,10 @@ a:link {
     width: 80px;
     height: 80px;
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
+  .grid-container {
+    grid-template-columns: repeat(1, 1fr);
+    /* grid-template-rows: repeat(3, 1fr); */
   }
   .impressum {
     line-height: 1.2rem;
