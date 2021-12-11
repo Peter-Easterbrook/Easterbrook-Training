@@ -200,7 +200,7 @@ p {
   margin-bottom: 3rem;
   color: #000;
   padding: 10px;
-  border: 1px solid #fffff0;
+  border: 1px solid #ccc;
   border-radius: 0.5rem;
   text-shadow: var(--text-shadow);
   box-shadow: var(--box-shadow);
@@ -219,10 +219,9 @@ p {
 }
 
 .section-title:hover {
-  color: #fffff0;
+  color: #fffff7;
+  background: #3d526e;
   font-weight: lighter;
-  border: 1px solid #666;
-  box-shadow: 0px 1px 2px 3px rgba(255, 255, 255, 0.4);
   cursor: pointer;
 }
 /* Accordion---------------------*/
@@ -232,6 +231,7 @@ p {
 }
 
 .card-header {
+  height: 4rem;
   color: #000;
   background: linear-gradient(
     0deg,
@@ -245,21 +245,14 @@ p {
     #bbcaf6
   );
 }
-.card-body {
-  background: #3d526e;
-  color: #fff;
-  transition: all 0.4s ease-out;
-}
 
-.my-auto {
-  font-size: 1.5rem;
+.cardHeaderText {
+  font-size: large;
   color: #000;
   text-shadow: var(--text-shadow);
-  text-decoration: 0;
-  outline-style: none;
 }
 
-.my-auto:hover {
+.cardHeaderText:hover {
   color: #fffff0;
   transition: all 0.2s ease-in;
   cursor: pointer;
@@ -272,6 +265,13 @@ p {
 .card-header button:focus {
   box-shadow: none !important;
 }
+.card-body {
+  background: #3d526e;
+  color: #fff;
+  font-weight: lighter;
+  transition: all 0.4s ease-out;
+  font-size: 0.9rem;
+}
 .flag {
   width: 2rem;
 }
@@ -283,7 +283,7 @@ p {
 .one {
   color: #fffff0;
   font-weight: lighter;
-  border: 0.5px solid #fffff0;
+  border: 1px solid #ccc;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.19), 0 3px 3px rgba(0, 0, 0, 0.23);
   padding: 10px;
   border-radius: 0.5rem;
@@ -450,7 +450,7 @@ p {
 .priceCard {
   width: 300px;
   max-height: 600px;
-  border: 1px solid #fffff0;
+  border: 1px solid #ccc;
   background: linear-gradient(
     180deg,
     #fffff0,
@@ -514,7 +514,7 @@ p {
     #a8b8e2,
     #bbcaf6
   );
-  border: 1px solid #f9f9f9;
+  border: 1px solid #ccc;
   border-radius: 0.5rem;
   padding: 40px;
   margin-right: 10%;
@@ -539,7 +539,7 @@ p {
     #bbcaf6
   );
   color: #fffff7;
-  border: 1px solid #fffff7;
+  border: 1px solid #ccc;
   border-radius: 4px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
   cursor: pointer;

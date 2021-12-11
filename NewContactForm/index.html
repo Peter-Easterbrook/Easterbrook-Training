@@ -84,7 +84,7 @@
     <!--This one links the JavaScript file-->
     <script src="contact.js" defer></script>
 
-    <!-- <link
+    <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
       integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
@@ -94,7 +94,7 @@
       src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
       integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
       crossorigin="anonymous"
-    ></script> -->
+    ></script>
 
     <!-- <script src="script.js"></script> -->
   </head>
@@ -169,34 +169,8 @@
 
       <div id="main-content" class="page-sections">
         <section class="page-section">
-          <script>
-            $(document).ready(() => {
-              // Add minus icon for collapse element which is open by default
-              $('.collapse.show').each(function () {
-                $(this)
-                  .prev('.card-header')
-                  .find('.bi')
-                  .addClass('bi-dash-circle')
-                  .removeClass('bi-plus-circle');
-              });
-
-              // Toggle plus minus icon on show hide of collapse element
-              $('.collapse')
-                .on('show.bs.collapse', function () {
-                  $(this)
-                    .prev('.card-header')
-                    .find('.bi')
-                    .removeClass('bi-plus-circle')
-                    .addClass('bi-dash-circle');
-                })
-                .on('hide.bs.collapse', function () {
-                  $(this)
-                    .prev('.card-header')
-                    .find('.bi')
-                    .removeClass('bi-dash-circle')
-                    .addClass('bi-plus-circle');
-                });
-            });
+          <script src="script.js" defer>
+  
           </script>
           <h2 class="section-title" id="Dienstleistungen">
             Dienstleistungen<i class="bi bi-bell float-right mr-2"></i>

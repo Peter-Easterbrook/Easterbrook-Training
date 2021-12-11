@@ -18,7 +18,7 @@ $mail_status = mail($mailTo, $subject, $body_message, $headers);
 
 	if ($mail_status) { ?>
 	<script language="javascript" type="text/javascript">
-		alert('Danke f&uuml;r die Nachricht. Wir werden Sie in K&uuml;rze kontaktieren.');
+		alert('Danke für die Nachricht. Wir werden Sie in Kürze kontaktieren.');
 		window.location = 'index.html';
 	</script>
 <?php
