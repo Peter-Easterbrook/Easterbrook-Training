@@ -90,6 +90,19 @@
       integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
       crossorigin="anonymous"
     ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.2/gsap.min.js"
+      integrity="sha512-kVlGhj2qFy+KBCFuvjBJTGUMxbdqJKs4yK2jh0e0VPhWUPiPC87bzm4THmaaIee3Oj7j6sDpTTgm2EPPiESqBg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.2/ScrollTrigger.min.js"
+      integrity="sha512-mwNAdRfAgTFw7sywUyp8aLsHQN5qHd6PIX2K8zIbJLjGw0DyKriCK3sSs9IphpRqsNRvyRlP3HtbFtJIUofHJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
     <!--This one links the CSS style sheet-->
     <link rel="stylesheet" type="text/css" href="style.css" />
 
@@ -112,12 +125,7 @@
         <h2 class="subtitle">Ihr Partner für alles auf Englisch</h2>
       </header>
       <nav
-        class="
-          navbar navbar-expand-lg navbar-light
-          sticky-top
-          shadow
-          justify-content-center
-        "
+        class="navbar navbar-expand-lg navbar-light sticky-top shadow justify-content-center"
       >
         <div class="container-fluid">
           <button
@@ -593,5 +601,18 @@
       integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
       crossorigin="anonymous"
     ></script>
+    <script>
+      gsap.from('.logo', {
+        scrollTrigger: {
+          trigger: '.bi-bell',
+          start: 'top top',
+          end: '=+500',
+          scrub: 1,
+        },
+        stagger: { amount: 5 },
+        scale: 0,
+        duration: 1,
+      });
+    </script>
   </body>
 </html>
