@@ -6,7 +6,7 @@ gsap.from('.logo', {
     scrub: 1,
     // markers: true,
   },
-  stagger: { amount: 5 },
+  stagger: { amount: 2 },
   scale: 0,
   duration: 1,
 });
