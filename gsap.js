@@ -4,6 +4,7 @@ gsap.from('.logo', {
     start: 'top top',
     end: '=+380',
     scrub: 1,
+    // markers: true,
   },
   stagger: { amount: 5 },
   scale: 0,
