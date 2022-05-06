@@ -4,8 +4,8 @@ $(document).ready(() => {
     $(this)
       .prev('.card-header')
       .find('.bi')
-      .addClass('bi-dash-circle')
-      .removeClass('bi-plus-circle');
+      .addClass('bi-arrow-up-circle')
+      .removeClass('bi-arrow-down-circle');
   });
 
   // Toggle plus minus icon on show hide of collapse element
@@ -14,14 +14,14 @@ $(document).ready(() => {
       $(this)
         .prev('.card-header')
         .find('.bi')
-        .removeClass('bi-plus-circle')
-        .addClass('bi-dash-circle');
+        .removeClass('bi-arrow-down-circle')
+        .addClass('bi-arrow-up-circle');
     })
     .on('hide.bs.collapse', function () {
       $(this)
         .prev('.card-header')
         .find('.bi')
-        .removeClass('bi-dash-circle')
-        .addClass('bi-plus-circle');
+        .removeClass('bi-arrow-up-circle')
+        .addClass('bi-arrow-down-circle');
     });
 });
