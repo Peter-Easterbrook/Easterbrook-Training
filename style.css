@@ -275,9 +275,9 @@ p {
 }
 
 /*---------About section---------------*/
-.scale {
+/* .scale {
   perspective: 1000px;
-}
+} */
 .one {
   color: #fffff0;
   font-weight: lighter;
