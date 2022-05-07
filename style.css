@@ -278,7 +278,7 @@ p {
 /* .scale {
   perspective: 1000px;
 } */
-.one {
+.scale > .one {
   color: #fffff0;
   font-weight: lighter;
   border: 1px solid #ccc;
@@ -292,7 +292,7 @@ p {
   font-smooth: always;
 }
 @media screen and (min-width: 769px) {
-  .one:hover {
+  .scale > .one:hover {
     color: #191c20;
     background: #fffff0;
     border: 0.5px solid #6a7a8d;

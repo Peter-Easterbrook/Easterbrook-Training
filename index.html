@@ -134,13 +134,13 @@
                 width="50px"
                 alt="Lion Logo"
               />
-              <a class="navbar-item nav-link text-dark mx-2" href="#Über"
+              <a class="navbar-item nav-link text-dark mx-2" href="#uber"
                 >Über Uns</a
               >
-              <a class="navbar-item nav-link text-dark mx-2" href="#Preise"
+              <a class="navbar-item nav-link text-dark mx-2" href="#angebot"
                 >Preise</a
               >
-              <a class="navbar-item nav-link text-dark mx-2" href="#Kontakt"
+              <a class="navbar-item nav-link text-dark mx-2" href="#kontakt"
                 >Kontakt</a
               >
             </div>
@@ -384,7 +384,7 @@
           </div>
         </section>
         <section class="page-section scale">
-          <h2 class="section-title" id="Über">
+          <h2 class="section-title" id="uber">
             Über Uns
             <i class="bi bi-info-circle float-right mr-2"></i>
           </h2>
@@ -425,11 +425,11 @@
           </p>
         </section>
         <section class="page-section priceSection">
-          <h2 class="section-title" id="Preise">
+          <h2 class="section-title" id="angebot">
             Das Angebot<i class="bi bi-trophy float-right mr-2"></i>
           </h2>
           <div class="cards">
-            <div class="priceCard my-3">
+            <div class="priceCard my-3" id="priceCard">
               <h2 class="pl-3 mt-3 priceCardHeader">Reisespesen</h2>
               <ul>
                 <li>
@@ -449,7 +449,7 @@
               <div class="shadow shadow-right" aria-hidden="true"></div>
             </div>
 
-            <div class="priceCard my-3">
+            <div class="priceCard my-3" id="priceCard">
               <h2 class="pl-3 mt-3 priceCardHeader">Gruppenkurse</h2>
 
               <ul>
@@ -463,7 +463,8 @@
                 <li>€2 für jeden weiteren Teilnehmer pro Einheit.</li>
               </ul>
             </div>
-            <div class="priceCard my-3">
+
+            <div class="priceCard my-3" id="priceCard">
               <h2 class="pl-3 mt-3 priceCardHeader">Kursmaterialien</h2>
               <ul>
                 <li>
@@ -478,7 +479,8 @@
                 </li>
               </ul>
             </div>
-            <div class="priceCard my-3">
+
+            <div class="priceCard my-3" id="priceCard">
               <h2 class="pl-3 mt-3 priceCardHeader">Übersetzungen</h2>
 
               <ul>
@@ -497,7 +499,8 @@
                 </li>
               </ul>
             </div>
-            <div class="priceCard my-3">
+
+            <div class="priceCard my-3" id="priceCard">
               <h2 class="pl-3 mt-3 priceCardHeader">Einzeltraining</h2>
 
               <ul>
@@ -510,95 +513,97 @@
           </div>
         </section>
         <section class="page-section contact">
-          <h2 class="section-title" id="Kontakt">
+          <h2 class="section-title" id="kontakt">
             Kontakt aufnehmen<i class="bi bi-envelope float-right mr-2"></i>
           </h2>
 
-          <!-- <div class="form-container mt-5"> -->
-          <form
-            id="frmContact"
-            method="POST"
-            action="contact.php"
-            class="contactForm"
-            enctype="multipart/form-data"
-          >
-            <div class="form-group row">
-              <label class="col-sm-3 col-form-label" for="name">Name:</label>
-              <div class="col-sm-9">
-                <input
-                  type="text"
-                  class="form-control border-dark inner-shadow"
-                  id="name"
-                  name="cf_name"
-                  placeholder="Ihre Name"
-                  required
-                />
-              </div>
-            </div>
-            <div class="form-group row">
-              <label class="col-sm-3 col-form-label" for="email">Email:</label>
-              <div class="col-sm-9">
-                <input
-                  type="email"
-                  class="form-control border-dark"
-                  id="email"
-                  name="cf_email"
-                  placeholder="name@domain.at"
-                  required
-                />
-              </div>
-            </div>
-            <div class="form-group row">
-              <label class="col-sm-3 col-form-label" for="message"
-                >Anfrage:</label
-              >
-              <div class="col-sm-9">
-                <textarea
-                  class="form-control border-dark"
-                  rows="5"
-                  id="message"
-                  name="cf_message"
-                  placeholder="Ihre Anfrage"
-                  required
-                ></textarea>
-              </div>
-            </div>
-            <button
-              type="submit"
-              value="Antwort anfordern!"
-              id="button"
-              class="custom-btn"
+          <div class="formContainer">
+            <form
+              id="frmContact"
+              method="POST"
+              action="contact.php"
+              class="contactForm"
+              enctype="multipart/form-data"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                x="0px"
-                y="0px"
-                viewBox="0 0 512 512"
-                width="30px"
-                height="30px"
-                id="svg"
-                fill="#000"
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label" for="name">Name:</label>
+                <div class="col-sm-9">
+                  <input
+                    type="text"
+                    class="form-control border-dark inner-shadow"
+                    id="name"
+                    name="cf_name"
+                    placeholder="Ihre Name"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label" for="email"
+                  >Email:</label
+                >
+                <div class="col-sm-9">
+                  <input
+                    type="email"
+                    class="form-control border-dark"
+                    id="email"
+                    name="cf_email"
+                    placeholder="name@domain.at"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label" for="message"
+                  >Anfrage:</label
+                >
+                <div class="col-sm-9">
+                  <textarea
+                    class="form-control border-dark"
+                    rows="5"
+                    id="message"
+                    name="cf_message"
+                    placeholder="Ihre Anfrage"
+                    required
+                  ></textarea>
+                </div>
+              </div>
+              <button
+                type="submit"
+                value="Antwort anfordern!"
+                id="button"
+                class="custom-btn"
               >
-                <polyline
-                  class="svgPoly"
-                  style="fill: #bbcaf6"
-                  points="453.953,386.734 503.037,386.734 503.037,126.461 143.412,126.461 143.412,386.734 
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  x="0px"
+                  y="0px"
+                  viewBox="0 0 512 512"
+                  width="30px"
+                  height="30px"
+                  id="svg"
+                  fill="#000"
+                >
+                  <polyline
+                    class="svgPoly"
+                    style="fill: #bbcaf6"
+                    points="453.953,386.734 503.037,386.734 503.037,126.461 143.412,126.461 143.412,386.734 
            424.076,386.734 "
-                />
-                <polygon
-                  class="svgPoly"
-                  style="fill: #bbcaf6"
-                  points="143.412,164.704 208.136,222.628 230.979,243.071 323.224,325.626 503.037,164.704 
+                  />
+                  <polygon
+                    class="svgPoly"
+                    style="fill: #bbcaf6"
+                    points="143.412,164.704 208.136,222.628 230.979,243.071 323.224,325.626 503.037,164.704 
            503.037,126.461 143.412,126.461 "
-                />
-                <polyline
-                  class="svgPoly"
-                  style="fill: #bbcaf6"
-                  points="143.412,126.461 208.136,184.385 230.979,204.828 323.224,287.383 503.037,126.461 "
-                />
-                <path
-                  d="M503.037,116.9H143.412c-4.95,0-8.963,4.013-8.963,8.963v260.273c0,4.95,4.013,8.963,8.963,8.963h280.663
+                  />
+                  <polyline
+                    class="svgPoly"
+                    style="fill: #bbcaf6"
+                    points="143.412,126.461 208.136,184.385 230.979,204.828 323.224,287.383 503.037,126.461 "
+                  />
+                  <path
+                    d="M503.037,116.9H143.412c-4.95,0-8.963,4.013-8.963,8.963v260.273c0,4.95,4.013,8.963,8.963,8.963h280.663
            c4.95,0,8.963-4.013,8.963-8.963c0-4.95-4.013-8.963-8.963-8.963H166.869l121.955-109.147l28.423,25.438
            c1.702,1.523,3.839,2.284,5.977,2.284s4.276-0.761,5.977-2.284l28.419-25.434l121.952,109.143h-25.619
            c-4.95,0-8.963,4.013-8.963,8.963c0,4.95,4.013,8.963,8.963,8.963h49.084c4.95,0,8.963-4.013,8.963-8.963V125.863
@@ -606,46 +611,46 @@
            c-3.301,3.689-2.988,9.355,0.702,12.657l50.381,45.087L152.375,366.088V145.915l49.783,44.553c1.71,1.531,3.846,2.284,5.974,2.284
            c2.461,0,4.912-1.007,6.682-2.985c3.301-3.689,2.988-9.355-0.702-12.656l-47.245-42.281h312.713L323.224,274.757z M494.074,145.914
            v220.18L371.062,256.001L494.074,145.914z"
-                />
-                <path
-                  d="M32.865,166.372h69.91c4.95,0,8.963-4.013,8.963-8.963s-4.013-8.963-8.963-8.963h-69.91c-4.95,0-8.963,4.013-8.963,8.963
+                  />
+                  <path
+                    d="M32.865,166.372h69.91c4.95,0,8.963-4.013,8.963-8.963s-4.013-8.963-8.963-8.963h-69.91c-4.95,0-8.963,4.013-8.963,8.963
            S27.915,166.372,32.865,166.372z"
-                />
-                <path
-                  d="M108.75,273.925H44.816c-4.95,0-8.963,4.013-8.963,8.963c0,4.95,4.013,8.963,8.963,8.963h63.934
+                  />
+                  <path
+                    d="M108.75,273.925H44.816c-4.95,0-8.963,4.013-8.963,8.963c0,4.95,4.013,8.963,8.963,8.963h63.934
            c4.95,0,8.963-4.013,8.963-8.963C117.714,277.938,113.7,273.925,108.75,273.925z"
-                />
-                <path
-                  d="M8.963,238.075h75.885c4.95,0,8.963-4.013,8.963-8.963c0-4.95-4.013-8.963-8.963-8.963H8.963
+                  />
+                  <path
+                    d="M8.963,238.075h75.885c4.95,0,8.963-4.013,8.963-8.963c0-4.95-4.013-8.963-8.963-8.963H8.963
            c-4.95,0-8.963,4.013-8.963,8.963C0,234.062,4.013,238.075,8.963,238.075z"
-                />
-                <path
-                  d="M84.848,345.628h-7.351c-4.95,0-8.963,4.013-8.963,8.963s4.013,8.963,8.963,8.963h7.351c4.95,0,8.963-4.013,8.963-8.963
+                  />
+                  <path
+                    d="M84.848,345.628h-7.351c-4.95,0-8.963,4.013-8.963,8.963s4.013,8.963,8.963,8.963h7.351c4.95,0,8.963-4.013,8.963-8.963
            S89.798,345.628,84.848,345.628z"
-                />
-                <path
-                  d="M47.62,345.628H8.963c-4.95,0-8.963,4.013-8.963,8.963s4.013,8.963,8.963,8.963H47.62c4.95,0,8.963-4.013,8.963-8.963
+                  />
+                  <path
+                    d="M47.62,345.628H8.963c-4.95,0-8.963,4.013-8.963,8.963s4.013,8.963,8.963,8.963H47.62c4.95,0,8.963-4.013,8.963-8.963
            S52.57,345.628,47.62,345.628z"
-                />
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-              </svg>
-            </button>
-          </form>
-          <!-- </div> -->
+                  />
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                </svg>
+              </button>
+            </form>
+          </div>
         </section>
       </div>
       <footer class="placeholder-footer">
