@@ -15,7 +15,7 @@ gsap.from('.logo', {
 function paraAnimation(para) {
   let paraTL = gsap.timeline();
   paraTL.from(para, {
-    ease: 'back.out(1.6)',
+    ease: 'back.out(1.2)',
     scale: 0,
     y: 100,
     duration: 3,
@@ -27,7 +27,7 @@ let main = gsap.timeline({
   scrollTrigger: {
     trigger: '.bi-gem',
     start: 'top top',
-    end: '=+280',
+    end: '=+360',
     // markers: true,
     scrub: true,
   },
