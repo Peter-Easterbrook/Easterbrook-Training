@@ -4,12 +4,13 @@
 :root {
   --space: 1rem;
   --page-width: 80ch;
-  --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-  --text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
+  --box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  --text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
   --scrollbarBG: #fffff0;
   --thumbBG: #43464b;
   --width: 70px;
   --angle: 0deg;
+  --transition: all 0.2s ease-out;
 }
 
 html {
@@ -73,7 +74,7 @@ main {
   color: #000;
   background-color: #4b6587;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3E%3Cg fill='%23bbcaf6' fill-opacity='0.4'%3E%3Cpath fill-rule='evenodd' d='M0 0h4v4H0V0zm4 4h4v4H4V4z'/%3E%3C/g%3E%3C/svg%3E");
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--box-shadow);
 }
 
 h1,
@@ -119,11 +120,11 @@ p {
 }
 
 .shield-top {
-  transition: transform 1s ease;
   margin: 0 auto;
   width: 140px;
   height: 140px;
-  animation: in-out 1s infinite alternate;
+  filter: drop-shadow(0px 2px 4px rgb(52, 52, 52));
+  transition: var(--transition);
 }
 
 .shield-top:hover {
@@ -138,17 +139,20 @@ p {
 .navbar {
   background-color: #fffff0;
 }
+.nav-icon {
+  filter: drop-shadow(0px 2px 4px rgb(52, 52, 52));
+}
 .navbar-nav a {
   overflow: hidden;
 }
 .navbar-nav a {
-  color: #3a3a3d;
+  color: #171723;
   font-size: 1.2rem;
   font-weight: 300;
   text-decoration: none;
   position: relative;
   text-shadow: var(--text-shadow);
-  transition: all 0.3s ease-out;
+  transition: var(--transition);
 }
 .navbar-nav a::after {
   display: block;
@@ -160,15 +164,15 @@ p {
   margin-bottom: 0;
   background-color: #748597;
   transform: translateX(-112%);
-  transition: all 0.3s ease-out;
+  transition: var(--transition);
 }
 .navbar-nav a:hover {
   color: #000;
-  transition: all 0.3s ease-out;
+  transition: var(--transition);
 }
 
 .navbar-nav a:hover::after {
-  transition: all 0.3s ease-out;
+  transition: var(--transition);
   transform: translateX(-10%);
 }
 
@@ -214,7 +218,7 @@ p {
     #a8b8e2,
     #bbcaf6
   );
-  transition: all 0.2s ease-in;
+  transition: var(--transition);
 }
 
 .section-title:hover {
@@ -282,13 +286,13 @@ p {
   color: #fffff0;
   font-weight: lighter;
   border: 1px solid #ccc;
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.19), 0 3px 3px rgba(0, 0, 0, 0.23);
+  box-shadow: var(--box-shadow);
   padding: 10px;
   border-radius: 0.5rem;
   background: #4b6587;
   font-weight: lighter;
   cursor: pointer;
-  transition: all 0.4s ease-in;
+  transition: var(--transition);
   font-smooth: always;
 }
 @media screen and (min-width: 769px) {
@@ -330,7 +334,7 @@ p {
   max-width: 45rem;
   margin: 3rem auto;
   border: 1px solid #aaa;
-  transition: 0.3s all ease;
+  transition: var(--transition);
 }
 .portfolio > h2:hover {
   background: #cdc8aa;
@@ -345,10 +349,6 @@ p {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
   /* grid-gap: 20px 15px; */
-}
-
-.logo:hover {
-  box-shadow: 0px 5px 5px 0px rgba(255, 255, 240, 1);
 }
 
 @keyframes wobble-vertical-on-hover {
@@ -405,9 +405,9 @@ p {
 .logo:active {
   animation-name: wobble-vertical-on-hover;
   animation-duration: 1s;
-  animation-timing-function: ease-in-out;
+  animation-timing-function: ease-out;
   animation-iteration-count: 1;
-  box-shadow: 0px 5px 5px 0px rgba(255, 255, 240, 1);
+  box-shadow: 0 5px 15px rgba(255, 255, 240);
   cursor: pointer;
 }
 
@@ -515,14 +515,14 @@ p {
     #a8b8e2,
     #bbcaf6
   );
-  border: 1px solid #ccc;
+  border: 1px solid #fffff0;
   border-radius: 0.5rem;
   padding: 40px;
   margin-right: 10%;
   margin-left: 10%;
   color: #000;
   box-shadow: var(--box-shadow);
-  transition: all 0.3s ease-out;
+  transition: var(--transition);
 }
 .contactForm:hover {
   transform: scale(1.02);
@@ -532,7 +532,7 @@ p {
   text-shadow: var(--text-shadow);
 }
 .form-control {
-  box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.6);
 }
 
 .custom-btn {
@@ -552,25 +552,25 @@ p {
   justify-content: center;
   overflow: hidden;
   outline: none;
-  border: 1px solid rgb(91, 91, 91);
+  border: 1px solid #fffff0;
   border-radius: 5px;
   font-weight: 200;
   font-size: 1rem;
   margin-left: auto;
   height: 3rem;
   width: 5rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  box-shadow: var(--box-shadow);
   cursor: pointer;
-  transition: all 0.2s ease-out;
+  transition: var(--transition);
 }
 
 .custom-btn:hover,
 .custom-btn:focus {
   outline: none;
-  border: 1px solid #fff;
+  border: 1px solid #bbb;
 }
 .custom-btn #svg {
-  transition: all 0.2s ease-out;
+  transition: var(--transition);
 }
 .custom-btn:hover #svg {
   fill: #fff;
@@ -579,7 +579,8 @@ p {
   fill: #3d526e !important;
 }
 .custom-btn:active {
-  box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.5);
+  scale: 0.9;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.6);
 }
 
 /* --------------Footer----------- */
