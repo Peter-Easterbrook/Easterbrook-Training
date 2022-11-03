@@ -28,31 +28,10 @@ let main = gsap.timeline({
     trigger: '.bi-gem',
     start: 'top top',
     end: '=+360',
-    markers: true,
+    // markers: true,
     scrub: true,
   },
 });
-main
-  .add(paraAnimation('#p1'))
-  .add(paraAnimation('#p2'), '<+=40%')
-  .add(paraAnimation('#p3'), '<+=40%')
-  .add(paraAnimation('#p4'), '<+=40%')
-  .add(paraAnimation('#p5'), '<+=40%')
-  .add(paraAnimation('#p6'), '<+=40%');
-
-// gsap.from('#priceCard', {
-//   scrollTrigger: {
-//     trigger: '#uber',
-//     start: 'top top',
-//     end: '=+700',
-//     scrub: 1,
-//     markers: true,
-//   },
-//   stagger: { amount: 4 },
-//   scale: 0,
-//   x: -300,
-//   duration: 2,
-// });
 
 gsap.from('.formContainer', {
   scrollTrigger: {
