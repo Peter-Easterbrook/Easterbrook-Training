@@ -4,7 +4,7 @@
 :root {
   --space: 1rem;
   --page-width: 80ch;
-  --box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
   --text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
   --scrollbarBG: #fffff0;
   --thumbBG: #43464b;
@@ -43,9 +43,7 @@ body {
   /* background-color: #7b849a; */
   background-color: #fffff7;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23a4acbf' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
-  animation: fadeInAnimation ease 3s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
+  animation: fadeInAnimation 2s ease-out 1 forwards;
 }
 @keyframes fadeInAnimation {
   0% {
@@ -230,6 +228,16 @@ p {
 .accordion {
   box-shadow: var(--box-shadow);
   border-radius: 0.5rem;
+  animation: fade-slide-in 1s ease-out forwards;
+}
+@keyframes fade-slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(4rem);
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .card-header {
@@ -276,36 +284,6 @@ p {
 }
 .flag {
   width: 2rem;
-}
-
-/*---------About section---------------*/
-.scale {
-  perspective: 1000px;
-}
-.scale > .one {
-  color: #fffff0;
-  font-weight: lighter;
-  border: 1px solid #ccc;
-  box-shadow: var(--box-shadow);
-  padding: 10px;
-  border-radius: 0.5rem;
-  background: #4b6587;
-  font-weight: lighter;
-  cursor: pointer;
-  font-smooth: always;
-  transition: var(--transition);
-}
-
-.scale .one:hover {
-  color: #191c20;
-  background: #fffff0;
-  border: 0.5px solid #6a7a8d;
-  transform: scale(1.2);
-}
-@media screen and (max-width: 769px) {
-  .scale > .one:hover {
-    transform: none;
-  }
 }
 
 /*---------Portfolio section---------------*/
@@ -412,6 +390,36 @@ p {
   animation-iteration-count: 1;
   box-shadow: 0 5px 15px rgba(255, 255, 240);
   cursor: pointer;
+}
+
+/*---------About section---------------*/
+.scale {
+  perspective: 1000px;
+}
+.scale > .one {
+  color: #fffff0;
+  font-weight: lighter;
+  border: 1px solid #ccc;
+  box-shadow: var(--box-shadow);
+  padding: 10px;
+  border-radius: 0.5rem;
+  background: #4b6587;
+  font-weight: lighter;
+  cursor: pointer;
+  font-smooth: always;
+  transition: var(--transition);
+}
+
+.scale .one:hover {
+  color: #191c20;
+  background: #fffff0;
+  border: 0.5px solid #6a7a8d;
+  transform: scale(1.2);
+}
+@media screen and (max-width: 769px) {
+  .scale > .one:hover {
+    transform: none;
+  }
 }
 
 /*-------------Price Cards------------*/
