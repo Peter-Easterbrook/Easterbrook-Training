@@ -81,6 +81,7 @@ h1,
 h2,
 h3 {
   line-height: 1.25;
+  text-shadow: var(--text-shadow);
 }
 p {
   font-size: 1rem;
@@ -247,6 +248,10 @@ p {
     #bbcaf6
   );
 }
+.card-header i {
+  font-size: 1.4rem;
+  color: #000;
+}
 
 .cardHeaderText {
   font-size: large;
@@ -273,6 +278,7 @@ p {
   font-weight: lighter;
   transition: all 0.4s ease-out;
   font-size: 0.9rem;
+  text-shadow: var(--text-shadow);
 }
 .flag {
   width: 2rem;
@@ -388,16 +394,17 @@ p {
 
 .scale .oneContainer .one {
   color: #fffff0;
+  text-shadow: var(--text-shadow);
   font-weight: lighter;
+  background: #4b6587;
   border: 1px solid #ccc;
-  box-shadow: var(--box-shadow);
   padding: 10px;
   border-radius: 0.5rem;
-  background: #4b6587;
   font-weight: lighter;
-  cursor: pointer;
   font-smooth: always;
+  box-shadow: var(--box-shadow);
   perspective: 1000px;
+  cursor: pointer;
   transition: var(--transition);
 }
 
@@ -441,7 +448,6 @@ p {
   );
   max-width: 45rem;
   margin: 3rem auto;
-  border: 1px solid #aaa;
   transition: 0.3s all ease;
 }
 .priceSection > h2:hover {
@@ -450,7 +456,7 @@ p {
 .priceCard {
   width: 300px;
   max-height: 600px;
-  border: 1px solid #ccc;
+  border: 1px solid #aaa;
   background: linear-gradient(
     180deg,
     #fffff0,
@@ -466,8 +472,9 @@ p {
   text-align: left;
   border-radius: 0.5rem;
   padding-right: 1rem;
+  text-shadow: var(--text-shadow);
   box-shadow: -2rem 0 3rem -2rem #000;
-  transition: 0.2s ease-out;
+  transition: all 0.2s ease-out;
 }
 .cards {
   display: flex;
@@ -526,7 +533,7 @@ p {
   transition: var(--transition);
 }
 .contactForm:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   color: #fff;
 }
 .col-form-label {
