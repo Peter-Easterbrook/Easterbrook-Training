@@ -4,7 +4,9 @@
 :root {
   --space: 1rem;
   --page-width: 80ch;
-  --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  --box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
+    0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075),
+    0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.075);
   --text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
   --scrollbarBG: #fffff0;
   --thumbBG: #43464b;
@@ -383,10 +385,8 @@ p {
 }
 
 /*---------About section---------------*/
-.scale {
-  perspective: 1000px;
-}
-.scale > .one {
+
+.scale .oneContainer .one {
   color: #fffff0;
   font-weight: lighter;
   border: 1px solid #ccc;
@@ -397,6 +397,7 @@ p {
   font-weight: lighter;
   cursor: pointer;
   font-smooth: always;
+  perspective: 1000px;
   transition: var(--transition);
 }
 
