@@ -393,7 +393,7 @@ p {
 /*---------About section---------------*/
 
 .scale .oneContainer .one {
-  color: #fffff0;
+  color: #fff;
   text-shadow: var(--text-shadow);
   font-weight: lighter;
   background: #4b6587;
