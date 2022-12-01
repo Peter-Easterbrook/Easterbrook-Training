@@ -53,12 +53,19 @@
       href="favicon/safari-pinned-tab.svg"
       color="#5bbad5"
     />
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
       integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
       crossorigin="anonymous"
+    /> -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
     />
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script
       defer
@@ -101,13 +108,14 @@
         <h2 class="subtitle">Ihr Partner für alles auf Englisch</h2>
       </header>
       <nav
-        class="navbar navbar-expand-lg navbar-light sticky-top shadow justify-content-center"
+        class="navbar navbar-expand-lg sticky-top shadow justify-content-center"
       >
         <div class="container-fluid">
           <button
             class="navbar-toggler"
-            data-toggle="collapse"
-            data-target="#navbarSupportedContent"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent"
             aria-expanded="false"
             aria-label="Toggle navigation"
@@ -115,35 +123,37 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div
-            class="collapse navbar-collapse justify-content-lg-center"
+            class="collapse navbar-collapse"
             id="navbarSupportedContent"
             style="background-color: ivory"
           >
-            <div class="navbar-nav me-auto mb-2 mb-lg-0">
-              <a
-                class="navbar-item nav-link text-dark mx-2"
-                href="#Dienstleistungen"
-                >Dienstleistungen</a
-              >
-              <a class="navbar-item nav-link text-dark mx-2" href="#Portfolio"
-                >Portfolio</a
-              >
+            <ul class="navbar-nav mb-2 mb-lg-0">
+              <li class="nav-item ms-3">
+                <a class="nav-link text-dark mx-2" href="#Dienstleistungen"
+                  >Dienstleistungen</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark mx-2" href="#Portfolio"
+                  >Portfolio</a
+                >
+              </li>
               <img
-                class="d-none d-lg-block ml-3 mr-2 nav-icon"
+                class="d-none d-lg-block nav-icon"
                 src="img/LL2020.webp"
                 width="50px"
                 alt="Lion Logo"
               />
-              <a class="navbar-item nav-link text-dark mx-2" href="#uber"
-                >Über Uns</a
-              >
-              <a class="navbar-item nav-link text-dark mx-2" href="#angebot"
-                >Preise</a
-              >
-              <a class="navbar-item nav-link text-dark mx-2" href="#kontakt"
-                >Kontakt</a
-              >
-            </div>
+              <li class="nav-item">
+                <a class="nav-link text-dark mx-2" href="#uber">Über Uns</a>
+              </li>
+              <li class="nav-item">
+                <a class="n nav-link text-dark mx-2" href="#angebot">Preise</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark mx-2" href="#kontakt">Kontakt</a>
+              </li>
+            </ul>
           </div>
         </div>
       </nav>
@@ -151,24 +161,24 @@
       <div id="main-content" class="page-sections">
         <section class="page-section dienstleistungen">
           <h2 class="section-title" id="Dienstleistungen">
-            Dienstleistungen<i class="bi bi-bell float-right mr-2"></i>
-            <!-- <i class="far fa-bell float-right mr-2 mt-1"></i> -->
+            Dienstleistungen<i class="bi bi-bell float-end me-2"></i>
+            <!-- <i class="far fa-bell float-end me-2 mt-1"></i> -->
           </h2>
           <!--Accordion-->
           <div class="accordion" id="accordion">
             <!--  <div class="accordion-group">-->
-            <div class="card">
-              <div class="card-header" id="headingOne">
+            <div class="accordion-item">
+              <div class="accordion-header" id="headingOne">
                 <a
                   class="btn btn-link text-decoration-none collapsed"
                   onclick="this.blur();"
-                  data-toggle="collapse"
-                  data-target="#collapseOne"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
                   aria-expanded="true"
                   aria-controls="collapseOne"
                 >
                   <p class="cardHeaderText">Online Unterricht:</p></a
-                ><i class="bi bi-arrow-down-circle mr-2 float-right"></i>
+                ><i class="bi bi-arrow-down-circle me-2 float-end"></i>
               </div>
               <div
                 id="collapseOne"
@@ -188,18 +198,18 @@
               </div>
             </div>
 
-            <div class="card">
-              <div class="card-header" id="headingTwo">
+            <div class="accordion-item">
+              <div class="accordion-header" id="headingTwo">
                 <a
                   class="btn btn-link text-decoration-none collapsed"
                   onclick="this.blur();"
-                  data-toggle="collapse"
-                  data-target="#collapseTwo"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo"
                   aria-expanded="false"
                   aria-controls="collapseTwo"
                 >
                   <p class="cardHeaderText">Individuelles Training:</p></a
-                ><i class="bi bi-arrow-down-circle mr-2 float-right"></i>
+                ><i class="bi bi-arrow-down-circle me-2 float-end"></i>
               </div>
               <div
                 id="collapseTwo"
@@ -219,18 +229,18 @@
               </div>
             </div>
 
-            <div class="card">
-              <div class="card-header" id="headingThree">
+            <div class="accordion-item">
+              <div class="accordion-header" id="headingThree">
                 <a
                   class="btn btn-link text-decoration-none collapsed"
                   onclick="this.blur();"
-                  data-toggle="collapse"
-                  data-target="#collapseThree"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree"
                   aria-expanded="false"
                   aria-controls="collapseThree"
                 >
                   <p class="cardHeaderText">Gruppen Kurse:</p></a
-                ><i class="bi bi-arrow-down-circle mr-2 float-right"></i>
+                ><i class="bi bi-arrow-down-circle me-2 float-end"></i>
               </div>
               <div
                 id="collapseThree"
@@ -250,18 +260,18 @@
               </div>
             </div>
 
-            <div class="card">
-              <div class="card-header" id="headingFour">
+            <div class="accordion-item">
+              <div class="accordion-header" id="headingFour">
                 <a
                   class="btn btn-link text-decoration-none collapsed"
                   onclick="this.blur();"
-                  data-toggle="collapse"
-                  data-target="#collapseFour"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseFour"
                   aria-expanded="false"
                   aria-controls="collapseFour"
                 >
                   <p class="cardHeaderText">Kursinhalt:</p></a
-                ><i class="bi bi-arrow-down-circle mr-2 float-right"></i>
+                ><i class="bi bi-arrow-down-circle me-2 float-end"></i>
               </div>
               <div
                 id="collapseFour"
@@ -283,13 +293,13 @@
               </div>
             </div>
 
-            <div class="card">
-              <div class="card-header" id="headingFive">
+            <div class="accordion-item">
+              <div class="accordion-header" id="headingFive">
                 <a
                   class="btn btn-link text-decoration-none collapsed"
                   onclick="this.blur();"
-                  data-toggle="collapse"
-                  data-target="#collapseFive"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseFive"
                   aria-expanded="false"
                   aria-controls="collapseFive"
                 >
@@ -300,7 +310,7 @@
                       src="img/AT.png"
                       alt="AT Flag"
                     /></p></a
-                ><i class="bi bi-arrow-down-circle mr-2 float-right"></i>
+                ><i class="bi bi-arrow-down-circle me-2 float-end"></i>
               </div>
               <div
                 id="collapseFive"
@@ -322,7 +332,7 @@
         </section>
         <section class="page-section portfolio">
           <h2 class="section-title" id="Portfolio">
-            Portfolio<i class="bi bi-gem float-right mr-2"></i>
+            Portfolio<i class="bi bi-gem float-end me-2"></i>
           </h2>
 
           <div class="grid-container">
@@ -386,7 +396,7 @@
         <section class="page-section scale">
           <h2 class="section-title" id="uber">
             Über Uns
-            <i class="bi bi-info-circle float-right mr-2"></i>
+            <i class="bi bi-info-circle float-end me-2"></i>
           </h2>
           <div class="oneContainer">
             <p class="one" id="p1">
@@ -428,11 +438,11 @@
         </section>
         <section class="page-section priceSection">
           <h2 class="section-title" id="angebot">
-            Das Angebot<i class="bi bi-trophy float-right mr-2"></i>
+            Das Angebot<i class="bi bi-trophy float-end me-2"></i>
           </h2>
           <div class="cards">
             <div class="priceCard my-3" id="priceCard">
-              <h2 class="pl-3 mt-3 priceCardHeader">Reisespesen</h2>
+              <h2 class="ps-3 mt-3 priceCardHeader">Reisespesen</h2>
               <ul>
                 <li>
                   Die Hin- und Rückfahrt wird mittels öffentlichen
@@ -452,7 +462,7 @@
             </div>
 
             <div class="priceCard my-3" id="priceCard">
-              <h2 class="pl-3 mt-3 priceCardHeader">Gruppenkurse</h2>
+              <h2 class="ps-3 mt-3 priceCardHeader">Gruppenkurse</h2>
 
               <ul>
                 <li>Ein Unterrichtstermin besteht aus 2 bis 6 Einheiten.</li>
@@ -467,7 +477,7 @@
             </div>
 
             <div class="priceCard my-3" id="priceCard">
-              <h2 class="pl-3 mt-3 priceCardHeader">Kursmaterialien</h2>
+              <h2 class="ps-3 mt-3 priceCardHeader">Kursmaterialien</h2>
               <ul>
                 <li>
                   Das während des Kurses verwendete Material wird von
@@ -483,7 +493,7 @@
             </div>
 
             <div class="priceCard my-3" id="priceCard">
-              <h2 class="pl-3 mt-3 priceCardHeader">Übersetzungen</h2>
+              <h2 class="ps-3 mt-3 priceCardHeader">Übersetzungen</h2>
 
               <ul>
                 <li>
@@ -503,7 +513,7 @@
             </div>
 
             <div class="priceCard my-3" id="priceCard">
-              <h2 class="pl-3 mt-3 priceCardHeader">Einzeltraining</h2>
+              <h2 class="ps-3 mt-3 priceCardHeader">Einzeltraining</h2>
 
               <ul>
                 <li>Ein Unterrichtstermin besteht aus 2 bis 6 Einheiten.</li>
@@ -516,7 +526,7 @@
         </section>
         <section class="page-section contact">
           <h2 class="section-title" id="kontakt">
-            Kontakt aufnehmen<i class="bi bi-envelope float-right mr-2"></i>
+            Kontakt aufnehmen<i class="bi bi-envelope float-end me-2"></i>
           </h2>
 
           <div class="formContainer">
@@ -527,24 +537,22 @@
               class="contactForm"
               enctype="multipart/form-data"
             >
-              <div class="form-group row">
-                <label class="col-sm-3 col-form-label" for="name">Name:</label>
-                <div class="col-sm-9">
-                  <input
+            <div class="mb-3">
+                <label class="form-label" for="name">Name:</label>
+                <input
                     type="text"
-                    class="form-control border-dark inner-shadow"
+                    class="form-control border-dark"
                     id="name"
                     name="cf_name"
                     placeholder="Ihre Name"
                     required
                   />
-                </div>
+        
               </div>
-              <div class="form-group row">
-                <label class="col-sm-3 col-form-label" for="email"
+              <div class="mb-3">
+                <label class="form-label" for="email"
                   >Email:</label
-                >
-                <div class="col-sm-9">
+                >           
                   <input
                     type="email"
                     class="form-control border-dark"
@@ -554,12 +562,12 @@
                     required
                   />
                 </div>
-              </div>
-              <div class="form-group row">
-                <label class="col-sm-3 col-form-label" for="message"
+      
+              <div class="mb-3">
+                <label class="form-label" for="message"
                   >Anfrage:</label
                 >
-                <div class="col-sm-9">
+          
                   <textarea
                     class="form-control border-dark"
                     rows="5"
@@ -569,8 +577,7 @@
                     required
                   ></textarea>
                 </div>
-              </div>
-              <button
+                     <button
                 type="submit"
                 value="Antwort anfordern!"
                 id="button"
@@ -651,6 +658,7 @@
                   <g></g>
                 </svg>
               </button>
+            </div>
             </form>
           </div>
         </section>
@@ -672,10 +680,10 @@
                 <div class="flip-card-back">
                   <a
                     href="https://gateway.onestepweb.dev/"
-                    target="_blank "
+                    target="_blank"
                     rel="noopener"
                     ><img
-                      class="shield-flip mx-auto"
+                      class="shield-flip"
                       src="img/OneStep2021.webp"
                       alt="onestepshield image"
                     />
@@ -696,9 +704,14 @@
     </main>
     <!-- partial -->
 
-    <script
+    <!-- <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+      crossorigin="anonymous"
+    ></script> -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous"
     ></script>
 

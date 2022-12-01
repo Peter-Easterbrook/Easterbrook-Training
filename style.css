@@ -18,8 +18,8 @@
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
-  scroll-padding-top: 4rem;
-  scroll-snap-type: y proximity;
+  scroll-padding-top: 6rem;
+  /* scroll-snap-type: y proximity; */
   scrollbar-width: thin;
   scrollbar-color: var(--thumbBG) var(--scrollbarBG);
 }
@@ -56,14 +56,14 @@ body {
   }
 }
 
-body::-webkit-scrollbar {
+html::-webkit-scrollbar {
   width: 8px;
 }
 
-body::-webkit-scrollbar-track {
+html::-webkit-scrollbar-track {
   background: var(--scrollbarBG);
 }
-body::-webkit-scrollbar-thumb {
+html::-webkit-scrollbar-thumb {
   background-color: var(--thumbBG);
   border-radius: 6px;
   border: 3px solid var(--scrollbarBG);
@@ -124,7 +124,7 @@ p {
   margin: 0 auto;
   width: 140px;
   height: 140px;
-  filter: drop-shadow(0px 2px 4px rgb(52, 52, 52));
+  filter: drop-shadow(0px 1px 2px rgb(52, 52, 52));
   transition: var(--transition);
 }
 
@@ -141,7 +141,10 @@ p {
   background-color: #fffff0;
 }
 .nav-icon {
-  filter: drop-shadow(0px 2px 4px rgb(52, 52, 52));
+  filter: drop-shadow(0px 1px 2px rgb(52, 52, 52));
+}
+.navbar-nav {
+  margin: 0 auto;
 }
 .navbar-nav a {
   overflow: hidden;
@@ -159,7 +162,7 @@ p {
   display: block;
   content: '';
   position: absolute;
-  bottom: 10px;
+  /* bottom: 10px; */
   width: 100%;
   height: 2px;
   margin-bottom: 0;
@@ -230,10 +233,16 @@ p {
 /* Accordion---------------------*/
 .accordion {
   box-shadow: var(--box-shadow);
-  border-radius: 0.5rem;
+}
+.accordion-item {
+  border: 1px solid #ccc;
+  background-color: #fffff0;
+  color: #000;
+  text-shadow: var(--text-shadow);
 }
 
-.card-header {
+.accordion-header {
+  padding: 0.6rem;
   height: 4rem;
   color: #000;
   background: linear-gradient(
@@ -248,7 +257,7 @@ p {
     #bbcaf6
   );
 }
-.card-header i {
+.accordion-header i {
   font-size: 1.4rem;
   color: #000;
 }
@@ -261,24 +270,25 @@ p {
 
 .cardHeaderText:hover {
   color: #fffff0;
-  transition: all 0.2s ease-in;
+  transition: all 0.2s ease-out;
   cursor: pointer;
 }
 
 .accordion:hover {
   color: #fffff0;
-  transition: all 0.2s ease-in;
+  transition: all 0.2s ease-out;
 }
-.card-header button:focus {
+.accordion-header button:focus {
   box-shadow: none !important;
 }
 .card-body {
   background: #3d526e;
   color: #fff;
   font-weight: lighter;
-  transition: all 0.4s ease-out;
   font-size: 0.9rem;
+  padding: 1rem;
   text-shadow: var(--text-shadow);
+  transition: all 0.3s ease-out;
 }
 .flag {
   width: 2rem;
@@ -610,6 +620,9 @@ p {
   margin: 0 auto;
   margin-right: 2rem;
 }
+.impressum:hover {
+  padding-bottom: 6rem;
+}
 
 a {
   color: #000;
@@ -624,7 +637,7 @@ a:link {
   height: auto;
   margin: auto;
   border-radius: 50%;
-  filter: drop-shadow(0px 2px 4px rgb(52, 52, 52));
+  filter: drop-shadow(0px 1px 2px rgb(52, 52, 52));
   cursor: url(img/glove2.png), auto;
 }
 .flip-card {
@@ -705,7 +718,7 @@ a:link {
     justify-content: center;
     color: #fffff0;
   }
-  body::-webkit-scrollbar {
+  html::-webkit-scrollbar {
     display: none;
   }
   .title {
