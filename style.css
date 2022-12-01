@@ -394,7 +394,6 @@ p {
 
 .scale .oneContainer .one {
   color: #fff;
-  text-shadow: var(--text-shadow);
   font-weight: lighter;
   background: #4b6587;
   border: 1px solid #ccc;
@@ -408,14 +407,15 @@ p {
   transition: var(--transition);
 }
 
-.scale .one:hover {
+.scale .oneContainer .one:hover {
+  text-shadow: var(--text-shadow);
   color: #191c20;
   background: #fffff0;
   border: 0.5px solid #6a7a8d;
   transform: scale(1.2);
 }
 @media screen and (max-width: 769px) {
-  .scale > .one:hover {
+  .scale .oneContainer .one:hover {
     transform: none;
   }
 }
