@@ -10,7 +10,7 @@
     <meta name="robots" content="index" />
     <meta
       name="keywords"
-      content="Präsentationstechniken, Übersetzungen, Englischunterricht"
+      content="Pr&#228;sentationstechniken, Übersetzungen, Englischunterricht"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="Cache-Control: max-age=31536000" content="public" />
@@ -65,6 +65,11 @@
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous"
     />
+    <script
+    src="https://kit.fontawesome.com/93b32f94da.js"
+    crossorigin="anonymous"
+    defer
+  ></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script
@@ -87,7 +92,8 @@
       integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
       crossorigin="anonymous"
     ></script>
-    <script src="script.js" defer></script>
+    <!-- <script src="script.js" defer></script> -->
+    <script src="accordion.js" defer></script>
     <script src="gsap.js" defer></script>
     <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
@@ -164,11 +170,102 @@
             Dienstleistungen<i class="bi bi-bell float-end me-2"></i>
             <!-- <i class="far fa-bell float-end me-2 mt-1"></i> -->
           </h2>
+          <!-- New Accordion -->
+          <div class="accContainer">
+            <div class="accWrapper">
+              <button class="toggle">
+                <h5 class="accHeader">Online Unterricht:</h5><i class="far fa-arrow-alt-circle-down icon"></i>
+              </button>
+              <div class="content">
+                <p>           Für die die zu "Home Office" gezwungen sind oder einfach zu
+                  hause bleiben möchten, Easterbrook Training bietet auch online
+                  Unterricht mittels MS Teams unter anderem.Der Kursinhalt wird
+                  hochgeladen zum MS Teams Dateien Depot und dadurch steht Ihnen
+                  jeder Zeit zur Verfügung. Dieser Lösung bietet die
+                  Flexibilit&#228;t die Sie benötigen wenn Sie zu Hause sind und
+                  zudem ist &#228;ußerst kostengünstig.
+                  
+            </p>
+              </div>
+            </div>
+            <div class="accWrapper">
+              <button class="toggle">
+                <h5 class="accHeader">Individuelles Training:</h5><i class="far fa-arrow-alt-circle-down icon"></i>
+              </button>
+              <div class="content">
+                <p>
+
+                  Für vielbesch&#228;ftigte Führungskr&#228;fte, die Flexibilit&#228;t bei den
+                  Trainingseinheiten benötigen, ist die zeit- und
+                  kostengünstigste Lösung ein individuelles Einzelcoaching. Die
+                  Kursinhalte werden gemeinsam mit dem Teilnehmer festgelegt. So
+                  ist sichergestellt, dass die jeweiligen Bedürfnisse optimal
+                  berücksichtigt werden und schnelle Fortschritte erzielt werden
+                  können.
+                </p>
+              </div>
+            </div>
+            <div class="accWrapper">
+              <button class="toggle">
+                <h5 class="accHeader">Gruppen Kurse:</h5><i class="far fa-arrow-alt-circle-down icon"></i>
+              </button>
+              <div class="content">
+                <p>
+
+                  Im Gegensatz zu Einzeltrainings, bei welchen Sie von der
+                  vollen Aufmerksamkeit des Trainers profitieren, ermöglichen
+                  Gruppenkurse eine st&#228;rkere Interaktion unter den Teilnehmern
+                  (durch Diskussionen, Rollenspiele und Verhandlungen). Die
+                  Gruppendynamik fördert die Kommunikation der Teilnehmer, was
+                  nicht nur einen schnellen Fortschritt ermöglicht, sondern auch
+                  das Lernen angenehmer macht.
+                </p>
+              </div>
+        
+            </div>
+        
+            <div class="accWrapper">
+              <button class="toggle">
+                <h5 class="accHeader">Kursinhalt:</h5><i class="far fa-arrow-alt-circle-down icon"></i>
+              </button>
+              <div class="content">
+                <p>           Easterbrook Sprachdienste verfügt über eine umfangreiche
+                  Bibliothek an Schulungsunterlagen, wodurch nahezu alle
+                  branchenspezifischen Themen und Situationen abgedeckt werden
+                  können. Von der Gesetzgebung bis zur Buchhaltung, von
+                  Informationstechnologie bis zu Personalthemen, ob telefonieren
+                  oder E-Mail-Korrespondenz; wir bemühen uns alle Ihre
+                  Anforderungen zu erfüllen. Bitte beachten Sie jedoch, dass wir
+                  lediglich spezialisierte Englischkurse und keine
+                  fachspezifischen Kurse in Englisch anbieten.</p>
+              </div>
+            </div>
+            <div class="accWrapper">
+              <button class="toggle">
+                <h5 class="accHeader">   Übersetzungen:
+                  <img class="flag" src="img/GB.png" alt="UK Flag" />-<img
+                    class="flag"
+                    src="img/AT.png"
+                    alt="AT Flag"
+                  /></h5><i class="bi-arrow-up-circle icon"></i>
+              </button>
+              <div class="content">
+                <p>
+                  Alle Übersetzungsauftr&#228;ge werden bis zu dem darauffolgenden
+                  Montag abgeschlossen. Wir bieten auch einen „Same-Day-Service“
+                  (Bearbeitung am selben Tag) für Texte mit einer angemessenen
+                  Größe. Unsere Übersetzer haben ein ausgepr&#228;gtes Gespür für die
+                  Themen und sind in der Lage Ihre Texte inhaltlich genau zu
+                  übersetzen.
+                </p>
+              </div>          
+                    </div>
+          </div>
           <!--Accordion-->
-          <div class="accordion" id="accordion">
+          <!-- <div class="accordion" id="accordion">
             <!--  <div class="accordion-group">-->
-            <div class="accordion-item">
-              <div class="accordion-header" id="headingOne">
+         <!--     <div class="accordion-item">
+                <div class="accordion-header" id="headingOne">
                 <a
                   class="btn btn-link text-decoration-none collapsed"
                   onclick="this.blur();"
@@ -177,8 +274,9 @@
                   aria-expanded="true"
                   aria-controls="collapseOne"
                 >
-                  <p class="cardHeaderText">Online Unterricht:</p></a
-                ><i class="bi bi-arrow-down-circle me-2 float-end"></i>
+                <p class="cardHeaderText">Online Unterricht:</p></a
+                >
+                <i class="bi bi-arrow-down-circle me-2 float-end"></i>
               </div>
               <div
                 id="collapseOne"
@@ -192,8 +290,8 @@
                   Unterricht mittels MS Teams unter anderem.Der Kursinhalt wird
                   hochgeladen zum MS Teams Dateien Depot und dadurch steht Ihnen
                   jeder Zeit zur Verfügung. Dieser Lösung bietet die
-                  Flexibilität die Sie benötigen wenn Sie zu Hause sind und
-                  zudem ist äußerst kostengünstig.
+                  Flexibilit&#228;t die Sie benötigen wenn Sie zu Hause sind und
+                  zudem ist &#228;ußerst kostengünstig.
                 </div>
               </div>
             </div>
@@ -218,7 +316,7 @@
                 data-parent="#accordion"
               >
                 <div class="card-body">
-                  Für vielbeschäftigte Führungskräfte, die Flexibilität bei den
+                  Für vielbesch&#228;ftigte Führungskr&#228;fte, die Flexibilit&#228;t bei den
                   Trainingseinheiten benötigen, ist die zeit- und
                   kostengünstigste Lösung ein individuelles Einzelcoaching. Die
                   Kursinhalte werden gemeinsam mit dem Teilnehmer festgelegt. So
@@ -251,7 +349,7 @@
                 <div class="card-body">
                   Im Gegensatz zu Einzeltrainings, bei welchen Sie von der
                   vollen Aufmerksamkeit des Trainers profitieren, ermöglichen
-                  Gruppenkurse eine stärkere Interaktion unter den Teilnehmern
+                  Gruppenkurse eine st&#228;rkere Interaktion unter den Teilnehmern
                   (durch Diskussionen, Rollenspiele und Verhandlungen). Die
                   Gruppendynamik fördert die Kommunikation der Teilnehmer, was
                   nicht nur einen schnellen Fortschritt ermöglicht, sondern auch
@@ -319,16 +417,16 @@
                 data-parent="#accordion"
               >
                 <div class="card-body">
-                  Alle Übersetzungsaufträge werden bis zu dem darauffolgenden
+                  Alle Übersetzungsauftr&#228;ge werden bis zu dem darauffolgenden
                   Montag abgeschlossen. Wir bieten auch einen „Same-Day-Service“
                   (Bearbeitung am selben Tag) für Texte mit einer angemessenen
-                  Größe. Unsere Übersetzer haben ein ausgeprägtes Gespür für die
+                  Größe. Unsere Übersetzer haben ein ausgepr&#228;gtes Gespür für die
                   Themen und sind in der Lage Ihre Texte inhaltlich genau zu
                   übersetzen.
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
         </section>
         <section class="page-section portfolio">
           <h2 class="section-title" id="Portfolio">
@@ -401,20 +499,20 @@
           <div class="oneContainer">
             <p class="one" id="p1">
               Easterbrook Sprachdienste ist seit 1999 für zahlreiche renommierte
-              Unternehmen in Wien tätig. Wir sind nicht nur Anbieter von
+              Unternehmen in Wien t&#228;tig. Wir sind nicht nur Anbieter von
               freiberuflichen Sprach- und Übersetzungsdiensten, sondern auch
-              Trainer für Präsentationsfertigkeiten,
+              Trainer für Pr&#228;sentationsfertigkeiten,
               PowerPoint-Schulungsseminare und Sprechtechniken.
             </p>
             <p class="one" id="p2">
-              Unser Ziel ist es, einen qualitativ hochwertigen, einschlägigen
+              Unser Ziel ist es, einen qualitativ hochwertigen, einschl&#228;gigen
               und berufsorientierten Englischunterricht für Erwachsene
               anzubieten, denn wir glauben, dass Kommunikation der Schlüssel zu
-              jedem Geschäftserfolg ist.
+              jedem Gesch&#228;ftserfolg ist.
             </p>
             <p class="one" id="p3">
               Ob es sich um einfache Redewendungen oder eine wichtige
-              Geschäftsverhandlungen bzw. Meilensteinverhandlungen handelt: Wir
+              Gesch&#228;ftsverhandlungen bzw. Meilensteinverhandlungen handelt: Wir
               können Ihnen dabei helfen, Ihr Ziel zu erreichen!
             </p>
             <p class="one" id="p4">
@@ -425,14 +523,14 @@
             <p class="one" id="p5">
               Unsere Übersetzungen von der deutschen Sprache in die englische.
               Sprache erfolgen ausschließlich von englischen „Muttersprachlern“.
-              Wir garantieren höchste Qualität, da unsere erfahrenen Übersetzer
-              und Lektoren sehr zuverlässig und professionell sind.
+              Wir garantieren höchste Qualit&#228;t, da unsere erfahrenen Übersetzer
+              und Lektoren sehr zuverl&#228;ssig und professionell sind.
             </p>
             <p class="one" id="p6">
               Wir decken eine Vielzahl von Themenbereichen ab: Immobilien und
               Liegenschaften, Banken und Finanzen, Personalwesen und Recht, und
-              vieles mehr. Zu unseren Übersetzungen zählen unter anderem
-              Gutachten, Software-Benutzerhandbücher, Websites und Lebensläufe.
+              vieles mehr. Zu unseren Übersetzungen z&#228;hlen unter anderem
+              Gutachten, Software-Benutzerhandbücher, Websites und Lebensl&#228;ufe.
             </p>
           </div>
         </section>
@@ -480,11 +578,11 @@
               <h2 class="ps-3 mt-3 priceCardHeader">Kursmaterialien</h2>
               <ul>
                 <li>
-                  Das während des Kurses verwendete Material wird von
+                  Das w&#228;hrend des Kurses verwendete Material wird von
                   Easterbrook Sprachdienste arrangiert.
                 </li>
                 <li>Das Kursmaterial wird mit €29/Teilnehmer berechnet.</li>
-                <li>Terminänderungen sind mit dem Trainer abzusprechen.</li>
+                <li>Termin&#228;nderungen sind mit dem Trainer abzusprechen.</li>
                 <li>
                   Eine Absage des Termins muss 24 Stunden im Voraus erfolgen
                   oder die Einheiten werden in Rechnung gestellt.
@@ -501,13 +599,13 @@
                   €49 pro Text.
                 </li>
                 <li>
-                  Für Expressübersetzungen &#40;bis zum nächsten Werktag&#41;
+                  Für Expressübersetzungen &#40;bis zum n&#228;chsten Werktag&#41;
                   verrechnen wir einen Aufschlag von €30.
                 </li>
                 <li>
                   Diese Aufschlag gilt auch für Texte die ab 14 Uhr Freitags
                   ankommen, die schon bis zum darauffolgenden Montag
-                  vervollständigt werden müßen.
+                  vervollst&#228;ndigt werden müßen.
                 </li>
               </ul>
             </div>
@@ -668,6 +766,11 @@
           <ul>
             <p>Impressum: Easterbrook Training</p>
             <p>Englischer Sprachdienstleistungen</p>
+            <a
+              href="https://gateway.onestepweb.dev/"
+              target="_blank"
+              rel="noopener"
+              >
             <div class="flip-card mb-3">
               <div class="flip-card-inner">
                 <div class="flip-card-front" id="shield">
@@ -678,19 +781,15 @@
                   />
                 </div>
                 <div class="flip-card-back">
-                  <a
-                    href="https://gateway.onestepweb.dev/"
-                    target="_blank"
-                    rel="noopener"
-                    ><img
+                    <img
                       class="shield-flip"
                       src="img/OneStep2021.webp"
                       alt="onestepshield image"
                     />
-                  </a>
+                  </div>
                 </div>
               </div>
-            </div>
+            </a>
             <p>
               One Step Web Development &copy;&nbsp;
               <script>
@@ -709,11 +808,11 @@
       integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
       crossorigin="anonymous"
     ></script> -->
-    <script
+    <!-- <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous"
-    ></script>
+    ></script> -->
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"
