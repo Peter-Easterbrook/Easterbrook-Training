@@ -1,0 +1,239 @@
+  <div class="accordion" id="accordion">
+             <div class="accordion-group">
+              <div class="accordion-item">
+                <div class="accordion-header" id="headingOne">
+                <a
+                  class="btn btn-link text-decoration-none collapsed"
+                  onclick="this.blur();"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                  aria-expanded="true"
+                  aria-controls="collapseOne"
+                >
+                <p class="cardHeaderText">Online Unterricht:</p></a
+                >
+                <i class="bi bi-arrow-down-circle me-2 float-end"></i>
+              </div>
+              <div
+                id="collapseOne"
+                class="collapse"
+                aria-labelledby="headingOne"
+                data-parent="#accordion"
+              >
+                <div class="card-body">
+                  Für die die zu "Home Office" gezwungen sind oder einfach zu
+                  hause bleiben möchten, Easterbrook Training bietet auch online
+                  Unterricht mittels MS Teams unter anderem.Der Kursinhalt wird
+                  hochgeladen zum MS Teams Dateien Depot und dadurch steht Ihnen
+                  jeder Zeit zur Verfügung. Dieser Lösung bietet die
+                  Flexibilit&#228;t die Sie benötigen wenn Sie zu Hause sind und
+                  zudem ist &#228;ußerst kostengünstig.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <div class="accordion-header" id="headingTwo">
+                <a
+                  class="btn btn-link text-decoration-none collapsed"
+                  onclick="this.blur();"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="collapseTwo"
+                >
+                  <p class="cardHeaderText">Individuelles Training:</p></a
+                ><i class="bi bi-arrow-down-circle me-2 float-end"></i>
+              </div>
+              <div
+                id="collapseTwo"
+                class="collapse"
+                aria-labelledby="headingTwo"
+                data-parent="#accordion"
+              >
+                <div class="card-body">
+                  Für vielbesch&#228;ftigte Führungskr&#228;fte, die Flexibilit&#228;t bei den
+                  Trainingseinheiten benötigen, ist die zeit- und
+                  kostengünstigste Lösung ein individuelles Einzelcoaching. Die
+                  Kursinhalte werden gemeinsam mit dem Teilnehmer festgelegt. So
+                  ist sichergestellt, dass die jeweiligen Bedürfnisse optimal
+                  berücksichtigt werden und schnelle Fortschritte erzielt werden
+                  können.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <div class="accordion-header" id="headingThree">
+                <a
+                  class="btn btn-link text-decoration-none collapsed"
+                  onclick="this.blur();"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree"
+                  aria-expanded="false"
+                  aria-controls="collapseThree"
+                >
+                  <p class="cardHeaderText">Gruppen Kurse:</p></a
+                ><i class="bi bi-arrow-down-circle me-2 float-end"></i>
+              </div>
+              <div
+                id="collapseThree"
+                class="collapse"
+                aria-labelledby="headingThree"
+                data-parent="#accordion"
+              >
+                <div class="card-body">
+                  Im Gegensatz zu Einzeltrainings, bei welchen Sie von der
+                  vollen Aufmerksamkeit des Trainers profitieren, ermöglichen
+                  Gruppenkurse eine st&#228;rkere Interaktion unter den Teilnehmern
+                  (durch Diskussionen, Rollenspiele und Verhandlungen). Die
+                  Gruppendynamik fördert die Kommunikation der Teilnehmer, was
+                  nicht nur einen schnellen Fortschritt ermöglicht, sondern auch
+                  das Lernen angenehmer macht.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <div class="accordion-header" id="headingFour">
+                <a
+                  class="btn btn-link text-decoration-none collapsed"
+                  onclick="this.blur();"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseFour"
+                  aria-expanded="false"
+                  aria-controls="collapseFour"
+                >
+                  <p class="cardHeaderText">Kursinhalt:</p></a
+                ><i class="bi bi-arrow-down-circle me-2 float-end"></i>
+              </div>
+              <div
+                id="collapseFour"
+                class="collapse"
+                aria-labelledby="headingFour"
+                data-parent="#accordion"
+              >
+                <div class="card-body">
+                  Easterbrook Sprachdienste verfügt über eine umfangreiche
+                  Bibliothek an Schulungsunterlagen, wodurch nahezu alle
+                  branchenspezifischen Themen und Situationen abgedeckt werden
+                  können. Von der Gesetzgebung bis zur Buchhaltung, von
+                  Informationstechnologie bis zu Personalthemen, ob telefonieren
+                  oder E-Mail-Korrespondenz; wir bemühen uns alle Ihre
+                  Anforderungen zu erfüllen. Bitte beachten Sie jedoch, dass wir
+                  lediglich spezialisierte Englischkurse und keine
+                  fachspezifischen Kurse in Englisch anbieten.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <div class="accordion-header" id="headingFive">
+                <a
+                  class="btn btn-link text-decoration-none collapsed"
+                  onclick="this.blur();"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseFive"
+                  aria-expanded="false"
+                  aria-controls="collapseFive"
+                >
+                  <p class="cardHeaderText">
+                    Übersetzungen:
+                    <img class="flag" src="img/GB.png" alt="UK Flag" />-<img
+                      class="flag"
+                      src="img/AT.png"
+                      alt="AT Flag"
+                    /></p></a
+                ><i class="bi bi-arrow-down-circle me-2 float-end"></i>
+              </div>
+              <div
+                id="collapseFive"
+                class="collapse"
+                aria-labelledby="headingFive"
+                data-parent="#accordion"
+              >
+                <div class="card-body">
+                  Alle Übersetzungsauftr&#228;ge werden bis zu dem darauffolgenden
+                  Montag abgeschlossen. Wir bieten auch einen „Same-Day-Service“
+                  (Bearbeitung am selben Tag) für Texte mit einer angemessenen
+                  Größe. Unsere Übersetzer haben ein ausgepr&#228;gtes Gespür für die
+                  Themen und sind in der Lage Ihre Texte inhaltlich genau zu
+                  übersetzen.
+                </div>
+              </div>
+            </div>
+          </div>
+
+CSS:
+
+
+/* Accordion---------------------*/
+.accordion {
+  box-shadow: var(--box-shadow);
+}
+.accordion-item {
+  border: 1px solid #ccc;
+  background-color: #fffff0;
+  color: #000;
+  text-shadow: var(--text-shadow);
+}
+
+.accordion-header {
+  padding: 0.6rem;
+  height: 4rem;
+  color: #000;
+  background: linear-gradient(
+    0deg,
+    #3d526e,
+    #4e6280,
+    #5f7293,
+    #7083a6,
+    #8294ba,
+    #95a6cd,
+    #a8b8e2,
+    #bbcaf6
+  );
+}
+.accordion-header i,
+.accordion-header p {
+  font-size: 1.4rem;
+  color: #000;
+  transition: var(--transition);
+}
+.accordion-header:hover i,
+.accordion-header:hover p {
+  color: #fffff7;
+  font-weight: lighter;
+  cursor: pointer;
+}
+
+.cardHeaderText {
+  color: #000;
+  text-shadow: var(--text-shadow);
+} */
+
+.cardHeaderText:hover,
+.cardHeaderText:hover i {
+  color: #fffff0;
+  cursor: pointer;
+}
+
+/* .accordion:hover {
+  color: #fffff0;
+  transition: all 0.2s ease-out;
+} 
+ .accordion-header button:focus {
+  box-shadow: none !important;
+}
+.card-body {
+  background: #3d526e;
+  color: #fff;
+  font-weight: lighter;
+  font-size: 0.9rem;
+  padding: 1rem;
+  text-shadow: var(--text-shadow);
+  transition: var(--transition);
+}
+.flag {
+  width: 2rem;
+} 
