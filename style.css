@@ -318,9 +318,6 @@ p {
   border: 1px solid #aaa;
   transition: var(--transition);
 }
-.portfolio > h2:hover {
-  background: #cdc8aa;
-}
 
 .grid-container {
   max-width: var(--page-width);
