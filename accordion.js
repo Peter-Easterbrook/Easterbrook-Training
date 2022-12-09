@@ -14,7 +14,6 @@ for (let i = 0; i < toggles.length; i++) {
       toggles[i].style.color = '#fff';
       icons[i].classList.remove('bi-arrow-up-circle');
       icons[i].classList.add('bi-arrow-down-circle');
-
       contentDiv[i].classList.remove('heightActive');
       contentDiv[i].classList.add('heightActive');
     }
