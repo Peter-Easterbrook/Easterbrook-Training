@@ -223,12 +223,33 @@ p {
   box-shadow: var(--box-shadow-light);
   transition: var(--transition);
 }
+.section-title.light {
+  background: linear-gradient(
+    180deg,
+    #cdc8aa,
+    #d5d1b5,
+    #dddac1,
+    #e5e3cd,
+    #eeedd8,
+    #f6f6e4,
+    #fffff0,
+    #f6f6e4,
+    #eeedd8,
+    #e5e3cd,
+    #dddac1,
+    #d5d1b5,
+    #cdc8aa
+  );
+  max-width: 45rem;
+  margin: 3rem auto;
+  border: 1px solid #fff;
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+}
 
 .section-title:hover {
-  color: #fffff7;
   font-weight: lighter;
-  user-select: none;
-  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.8);
+  transform: scale(1.05);
 }
 .SVGBGLight {
   background-color: #fffff0;
@@ -239,7 +260,6 @@ p {
 .accContainer {
   max-width: 40rem;
   margin: 0 auto;
-  /* border: 1px solid #fff; */
   border-radius: 3rem;
   background: linear-gradient(
     180deg,
@@ -253,10 +273,12 @@ p {
     #3d526e
   );
   box-shadow: var(--box-shadow-light);
+  transition: var(--transition);
 }
 .accContainer * {
   transition: var(--transition);
 }
+
 .accWrapper {
   margin: 0 auto;
   padding: 0 2rem;
@@ -302,23 +324,10 @@ p {
 }
 .content {
   font-size: 1rem;
-  font-weight: 400;
   height: 0;
   overflow: hidden;
   user-select: none;
-  background-image: linear-gradient(
-    0deg,
-    hsl(214deg 29% 34%) 0%,
-    hsl(215deg 27% 36%) 11%,
-    hsl(215deg 26% 38%) 22%,
-    hsl(216deg 25% 40%) 33%,
-    hsl(216deg 24% 43%) 44%,
-    hsl(217deg 23% 45%) 56%,
-    hsl(217deg 22% 47%) 67%,
-    hsl(218deg 21% 50%) 78%,
-    hsl(218deg 22% 52%) 89%,
-    hsl(219deg 23% 55%) 100%
-  );
+  background-color: #3d526e;
   border-radius: 0.3rem;
   font-smooth: always;
   border: 1px solid #ccc;
@@ -332,7 +341,7 @@ p {
 }
 
 .content p {
-  padding: 1rem 2rem;
+  padding: 2rem;
   color: #fff;
 }
 .content ul {
@@ -343,29 +352,6 @@ p {
 .portfolio {
   margin: 0 auto;
   max-width: 100vw;
-}
-.portfolio > h2 {
-  background: linear-gradient(
-    180deg,
-    #cdc8aa,
-    #d5d1b5,
-    #dddac1,
-    #e5e3cd,
-    #eeedd8,
-    #f6f6e4,
-    #fffff0,
-    #f6f6e4,
-    #eeedd8,
-    #e5e3cd,
-    #dddac1,
-    #d5d1b5,
-    #cdc8aa
-  );
-  max-width: 45rem;
-  margin: 3rem auto;
-  border: 1px solid #fff;
-  box-shadow: var(--box-shadow);
-  transition: var(--transition);
 }
 
 .grid-container {
@@ -442,20 +428,21 @@ p {
   color: #fff;
   font-weight: lighter;
   background: #4b6587;
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
   padding: 1rem 2rem;
   border-radius: 3rem;
   font-smooth: always;
-  box-shadow: var(--box-shadow);
   cursor: pointer;
   perspective: 1000px;
+  box-shadow: var(--box-shadow-light);
   transition: var(--transition);
 }
 
 .scale .oneContainer .one:hover {
   color: #000;
-  background: #fffff0;
-  border: 1px solid #aaa;
+  background: #fff;
+  border: 1px solid rgb(38, 38, 38);
+  box-shadow: var(--box-shadow);
   transform: scale(1.2);
 }
 @media screen and (max-width: 769px) {
@@ -476,34 +463,12 @@ p {
   margin: 0 auto;
   padding: 2rem 0;
 }
-.priceSection > h2 {
-  background: linear-gradient(
-    180deg,
-    #cdc8aa,
-    #d5d1b5,
-    #dddac1,
-    #e5e3cd,
-    #eeedd8,
-    #f6f6e4,
-    #fffff0,
-    #f6f6e4,
-    #eeedd8,
-    #e5e3cd,
-    #dddac1,
-    #d5d1b5,
-    #cdc8aa
-  );
-  max-width: 45rem;
-  margin: 3rem auto;
-  transition: var(--transition);
-  border: 1px solid #fff;
-  box-shadow: var(--box-shadow);
-}
 
 .priceCard {
   width: 300px;
   max-height: 600px;
-  border: 1px solid #fff;
+  border: 1px solid;
+  border-color: #ccc #ccc #fff #fff;
   background: linear-gradient(
     180deg,
     #fffff0,
@@ -518,7 +483,7 @@ p {
   color: #000;
   text-align: left;
   border-radius: 2rem;
-  padding-right: 1rem;
+  padding: 1rem;
   text-shadow: var(--text-shadow);
   box-shadow: -2rem 1rem 2rem -2rem rgba(0, 0, 0, 0.4);
   cursor: pointer;
