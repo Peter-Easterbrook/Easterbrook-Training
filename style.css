@@ -2,7 +2,7 @@
 @import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css');
 
 :root {
-  --space: 1.2rem;
+  --space: 1rem;
   --page-width: 80ch;
   --shadow-color: 0deg 0% 0%;
   --box-shadow: 0 1px 1px hsl(var(--shadow-color) / 0.075),
