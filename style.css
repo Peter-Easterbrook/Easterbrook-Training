@@ -2,21 +2,41 @@
 @import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css');
 
 :root {
-  --space: 1rem;
+  --space: 1.2rem;
   --page-width: 80ch;
+  --shadow-color: 0deg 0% 0%;
+  --shadow-color-light: 0deg 0% 100%;
   --box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
     0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075),
     0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.075);
-  --box-shadow-light: 0 1px 1px hsl(0deg 0% 100% / 100),
+  --box-shadow-light: 0 1px 1px hsl(0deg 0% 100% / 0.075),
     0 2px 2px hsl(0deg 0% 100% / 0.075), 0 4px 4px hsl(0deg 0% 100% / 0.075),
     0 8px 8px hsl(0deg 0% 100% / 0.075), 0 16px 16px hsl(0deg 0% 100% / 0.075);
+  --box-shadow-high: 0px 0.5px 0.6px hsl(var(--shadow-color) / 0.34),
+    0.1px 3px 3.4px -0.4px hsl(var(--shadow-color) / 0.075),
+    0.2px 5.5px 6.2px -0.7px hsl(var(--shadow-color) / 0.075),
+    0.3px 9.1px 10.2px -1.1px hsl(var(--shadow-color) / 0.075),
+    0.5px 14.5px 16.3px -1.4px hsl(var(--shadow-color) / 0.075),
+    0.8px 22.6px 25.4px -1.8px hsl(var(--shadow-color) / 0.075),
+    1.2px 34.4px 38.7px -2.1px hsl(var(--shadow-color) / 0.075),
+    1.7px 50.6px 57px -2.5px hsl(var(--shadow-color) / 0.075);
+  --box-shadow-high-light: 0px 0.5px 0.6px
+      hsl(var(--shadow-color-light) / 0.075),
+    0.1px 3px 3.4px -0.4px hsl(var(--shadow-color-light) / 0.075),
+    0.2px 5.5px 6.2px -0.7px hsl(var(--shadow-color-light) / 0.075),
+    0.3px 9.1px 10.2px -1.1px hsl(var(--shadow-color-light) / 0.075),
+    0.5px 14.5px 16.3px -1.4px hsl(var(--shadow-color-light) / 0.075),
+    0.8px 22.6px 25.4px -1.8px hsl(var(--shadow-color-light) / 0.075),
+    1.2px 34.4px 38.7px -2.1px hsl(var(--shadow-color-light) / 0.075),
+    1.7px 50.6px 57px -2.5px hsl(var(--shadow-color-light) / 0.075);
   --text-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
   --scrollbarBG: #fffff0;
   --thumbBG: #43464b;
   --width: 70px;
   --angle: 0deg;
   --transition: all 0.2s ease-out;
-  --filter: drop-shadow(0px 1px 2px rgb(52, 52, 52));
+  --filter: drop-shadow(0px 1px 2px rgb(96, 67, 67));
+  --transform: scale(1.05);
 }
 
 html {
@@ -129,7 +149,7 @@ p {
 }
 
 .shield-top:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   cursor: pointer;
 }
 
@@ -190,7 +210,7 @@ p {
   padding: calc(var(--space) * 2) var(--space);
   /* scroll-snap-align: start; */
   max-width: var(--page-width);
-  margin: 0 auto;
+  margin: 1rem auto;
 }
 
 .page-section > * + * {
@@ -200,7 +220,6 @@ p {
 .section-title {
   margin: 2rem auto;
   padding: 1rem 2rem;
-  /* border: 1px solid #ccc; */
   border-radius: 3rem;
   background: linear-gradient(
     0deg,
@@ -220,8 +239,14 @@ p {
     #4e6280,
     #3d526e
   );
+  border: 1px solid #aaa;
   box-shadow: var(--box-shadow-light);
   transition: var(--transition);
+}
+.section-title:hover {
+  font-weight: lighter;
+  transform: scale(1.05);
+  box-shadow: var(--box-shadow-high-light);
 }
 .section-title.light {
   background: linear-gradient(
@@ -247,9 +272,8 @@ p {
   transition: var(--transition);
 }
 
-.section-title:hover {
-  font-weight: lighter;
-  transform: scale(1.05);
+.section-title.light:hover {
+  box-shadow: var(--box-shadow-high);
 }
 .SVGBGLight {
   background-color: #fffff0;
@@ -274,6 +298,10 @@ p {
   );
   box-shadow: var(--box-shadow-light);
   transition: var(--transition);
+}
+.accContainer:hover {
+  box-shadow: var(--box-shadow-high-light);
+  transform: scale(1.05);
 }
 .accContainer * {
   transition: var(--transition);
@@ -357,12 +385,11 @@ p {
 .grid-container {
   max-width: var(--page-width);
   margin: 0 auto;
-  margin-bottom: 3rem;
-  display: grid;
+  padding-bottom: 3rem;
   place-items: center;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  /* grid-gap: 20px 15px; */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  grid-gap: 1rem;
 }
 .logo {
   width: 210px;
@@ -370,14 +397,9 @@ p {
   border-radius: 3rem;
   border: 1px solid #fff;
   box-shadow: var(--box-shadow);
-  transform: perspective(1px) translateZ(0);
 }
 
-.logo:hover,
-.logo:focus,
-.logo:active {
-  box-shadow: 0 5px 15px rgba(255, 255, 240);
-  cursor: pointer;
+.logo:hover {
   animation: wobble-vertical-on-hover 1s ease-out 1 forwards;
 }
 
@@ -428,7 +450,7 @@ p {
   color: #fff;
   font-weight: lighter;
   background: #4b6587;
-  /* border: 1px solid #ccc; */
+  border: 1px solid #aaa;
   padding: 1rem 2rem;
   border-radius: 3rem;
   font-smooth: always;
@@ -441,8 +463,7 @@ p {
 .scale .oneContainer .one:hover {
   color: #000;
   background: #fff;
-  border: 1px solid rgb(38, 38, 38);
-  box-shadow: var(--box-shadow);
+  box-shadow: var(--box-shadow-high);
   transform: scale(1.2);
 }
 @media screen and (max-width: 769px) {
@@ -525,7 +546,7 @@ p {
     #a8b8e2,
     #bbcaf6
   );
-  /* border: 1px solid #fff; */
+  border: 1px solid #aaa;
   border-radius: 2rem;
   padding: 40px;
   margin-right: 10%;
@@ -536,7 +557,7 @@ p {
 }
 .contactForm:hover {
   transform: scale(1.05);
-  color: #fff;
+  box-shadow: var(--box-shadow-high-light);
 }
 .formContainer input,
 .formContainer textarea {
@@ -576,7 +597,7 @@ p {
 .custom-btn:hover,
 .custom-btn:focus {
   outline: none;
-  border: 1px solid #bbb;
+  box-shadow: var(--box-shadow-high);
 }
 .custom-btn #svg {
   transition: var(--transition);
@@ -701,10 +722,9 @@ p {
     height: auto;
   }
 
-  .grid-container {
+  /* .grid-container {
     grid-template-columns: repeat(2, 1fr);
-    /* grid-template-rows: repeat(3, 1fr); */
-  }
+  } */
 }
 
 @media screen and (max-width: 860px) {
@@ -825,10 +845,10 @@ p {
     height: 80px;
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
   }
-  .grid-container {
+  /* .grid-container {
     grid-template-columns: repeat(1, 1fr);
-    /* grid-template-rows: repeat(3, 1fr); */
-  }
+
+  } */
   .impressum {
     line-height: 1.2rem;
   }
@@ -846,6 +866,10 @@ p {
   }
   .my-auto {
     font-size: 1.2rem;
+  }
+  .logo {
+    width: 252px;
+    height: 96px;
   }
 }
 @media screen and (max-width: 350px) {
