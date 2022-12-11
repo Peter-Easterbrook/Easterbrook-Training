@@ -47,7 +47,7 @@
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
-  scroll-padding-top: 6rem;
+  scroll-padding-top: 8rem;
   /* scroll-snap-type: y proximity; */
   scrollbar-width: thin;
   scrollbar-color: var(--thumbBG) var(--scrollbarBG);
@@ -173,10 +173,13 @@ p {
   margin: 0 auto;
 }
 .navbar-nav img {
-  margin: 0 1rem 0 2rem;
+  width: 50px;
+  height: 50px;
+  margin: auto 1.2rem;
 }
 .navbar-nav a {
   overflow: hidden;
+  padding: 1rem 2rem;
 }
 .navbar-nav a {
   position: relative;
@@ -224,6 +227,8 @@ p {
 }
 
 .section-title {
+  display: flex;
+  justify-content: space-between;
   margin: 2rem auto;
   padding: 1rem 2rem;
   border-radius: 3rem;
@@ -322,10 +327,6 @@ p {
 }
 .accWrapper:first-of-type {
   padding-top: 2rem;
-  border-radius: 3rem 3rem 0 0;
-}
-.accWrapper:last-of-type {
-  border-radius: 0 0 3rem 3rem;
 }
 
 .toggle {
@@ -372,6 +373,7 @@ p {
 .content.last {
   border-radius: 0 0 3rem 3rem;
   border: none;
+  margin-bottom: 1rem;
 }
 
 .content p {
@@ -473,6 +475,10 @@ p {
   transform: scale(1.2);
 }
 @media screen and (max-width: 769px) {
+  .scale .oneContainer .one {
+    border-radius: 0;
+    text-align: center;
+  }
   .scale .oneContainer .one:hover {
     transform: none;
   }
@@ -494,6 +500,7 @@ p {
 .priceCard {
   width: 300px;
   max-height: 600px;
+  margin: 2rem 0;
   border: 1px solid;
   border-color: #ccc #ccc #fffff7 #fffff7;
   background: linear-gradient(
@@ -515,6 +522,10 @@ p {
   box-shadow: -2rem 1rem 2rem -2rem rgba(0, 0, 0, 0.4);
   cursor: pointer;
   transition: var(--transition);
+}
+.priceCardHeader {
+  padding-left: 1rem;
+  margin-top: 1rem;
 }
 
 .priceCard ul {
@@ -664,8 +675,9 @@ p {
   cursor: url(img/glove2.png), auto;
 }
 .flip-card {
+  display: flex;
   align-items: center;
-  margin: auto;
+  margin-bottom: 1.2rem;
   background-color: transparent;
   width: 110px;
   height: 110px;
@@ -793,7 +805,6 @@ p {
   }
   .flip-card {
     align-items: center;
-    margin: auto;
     background-color: transparent;
     width: 80px;
     height: 80px;
@@ -822,11 +833,11 @@ p {
     margin: 4rem 0;
     border-radius: 0;
   }
-  .one {
-    text-align: center;
+  .accContainer {
     border-radius: 0;
-    border-left: none;
-    border-right: none;
+  }
+  .content.last {
+    border-radius: 0;
   }
 
   .contactForm {
@@ -845,7 +856,6 @@ p {
   }
   .flip-card {
     align-items: center;
-    margin: auto;
     background-color: transparent;
     width: 80px;
     height: 80px;
@@ -856,7 +866,9 @@ p {
 
   } */
   .impressum {
-    line-height: 1.2rem;
+    line-height: 1rem;
+    padding: 2rem 1rem 1rem;
+    margin: 1rem auto;
   }
 }
 @media screen and (max-width: 400px) {
