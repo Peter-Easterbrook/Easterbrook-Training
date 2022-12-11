@@ -310,7 +310,18 @@ p {
   border: var(--border);
   box-shadow: var(--box-shadow-light);
   transition: var(--transition);
+  animation: fade-slide-in 1s ease-out forwards;
 }
+@keyframes fade-slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(4rem);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .accContainer:hover {
   box-shadow: var(--box-shadow-high-light);
 }
