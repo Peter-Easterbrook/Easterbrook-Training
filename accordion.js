@@ -3,7 +3,7 @@ let contentDiv = document.getElementsByClassName('content');
 let icons = document.getElementsByClassName('icon');
 
 for (let i = 0; i < toggles.length; i++) {
-  toggles[i].addEventListener('click', () => {
+  toggles[i].addEventListener('mouseover', () => {
     if (parseInt(contentDiv[i].style.height) !== contentDiv[i].scrollHeight) {
       contentDiv[i].style.height = contentDiv[i].scrollHeight + 'px';
       toggles[i].style.color = '#fff';
