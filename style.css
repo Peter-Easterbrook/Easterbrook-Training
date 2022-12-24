@@ -963,6 +963,9 @@ p {
     border-right: none;
     border-radius: 0;
   }
+  .contactForm:hover {
+    transform: none;
+  }
 
   .shield-flip {
     width: 80px;
