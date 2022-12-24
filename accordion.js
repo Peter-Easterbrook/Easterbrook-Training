@@ -6,6 +6,7 @@ for (let i = 0; i < toggles.length; i++) {
   toggles[i].addEventListener('click', () => {
     if (parseInt(contentDiv[i].style.height) !== contentDiv[i].scrollHeight) {
       contentDiv[i].style.height = contentDiv[i].scrollHeight + 'px';
+      contentDiv[i].style.border = '1px solid #fffff7';
       toggles[i].style.color = '#fff';
       icons[i].classList.remove('bi-arrow-down-circle');
       icons[i].classList.add('bi-arrow-up-circle');

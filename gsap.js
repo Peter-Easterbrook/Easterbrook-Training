@@ -32,15 +32,17 @@ let main = gsap.timeline({
     scrub: true,
   },
 });
-
-gsap.from('.formContainer', {
-  scrollTrigger: {
-    trigger: '#angebot',
-    start: 'top top',
-    end: '=+380',
-    // markers: true,
-    scrub: 1,
-  },
-  scale: 0,
-  duration: 1,
+let mm = gsap.matchMedia();
+mm.add('(min-width: 800px)', () => {
+  gsap.from('.formContainer', {
+    scrollTrigger: {
+      trigger: '#angebot',
+      start: 'top top',
+      end: '=+380',
+      // markers: true,
+      scrub: 1,
+    },
+    scale: 0,
+    duration: 1,
+  });
 });
