@@ -485,7 +485,7 @@ p {
 }
 
 /*-------------Price Cards------------*/
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 45rem) {
   .priceSectionMobile {
     display: none;
   }
@@ -555,7 +555,7 @@ p {
   }
 }
 
-@media screen and (max-width: 719px) {
+@media screen and (max-width: 44.9rem) {
   /* About section Mobile *************** */
   .scale .oneContainer .one {
     border-radius: 0;
@@ -831,7 +831,7 @@ p {
   cursor: url(img/glove2.png), auto;
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 75rem) {
   .placeholder-section {
     display: grid;
     place-items: center;
@@ -860,7 +860,7 @@ p {
   } */
 }
 
-@media screen and (max-width: 860px) {
+@media screen and (max-width: 54rem) {
   #main-content,
   html {
     justify-content: center;
@@ -919,7 +919,7 @@ p {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 37.5rem) {
   .page-section {
     padding: 0;
   }
@@ -993,7 +993,7 @@ p {
     margin: 1rem auto;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 25rem) {
   .title {
     font-size: 2rem;
   }
@@ -1012,7 +1012,7 @@ p {
     height: 96px;
   }
 }
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 22rem) {
   .title {
     font-size: 1.8rem;
   }
