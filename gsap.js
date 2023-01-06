@@ -1,48 +1,28 @@
 gsap.from('.logo', {
   scrollTrigger: {
-    trigger: '.bi-bell',
-    start: 'top top',
-    end: '=+380',
+    trigger: '#portfolio',
+    start: 'top 50%',
+    end: 'center 50%',
+    // markers: true,
     scrub: 1,
-    // markers: true,
   },
-  stagger: { amount: 2 },
-  ease: 'back.out(1.4)',
   scale: 0,
-  duration: 4,
+  duration: 2.5,
+  ease: 'back.out(1.7)',
 });
 
-function paraAnimation(para) {
-  let paraTL = gsap.timeline();
-  paraTL.from(para, {
-    ease: 'back.out(1.2)',
-    scale: 0,
-    y: 10,
-    duration: 1,
-  });
-  return paraTL;
-}
-
-let main = gsap.timeline({
-  scrollTrigger: {
-    trigger: '.bi-gem',
-    start: 'top top',
-    end: '=+360',
-    // markers: true,
-    scrub: true,
-  },
-});
 let mm = gsap.matchMedia();
 mm.add('(min-width: 800px)', () => {
   gsap.from('.formContainer', {
     scrollTrigger: {
       trigger: '#angebot',
-      start: 'top top',
+      start: 'top top-=400',
       end: '=+380',
       // markers: true,
       scrub: 1,
     },
     scale: 0,
-    duration: 1,
+    duration: 3,
+    ease: 'power4.out',
   });
 });

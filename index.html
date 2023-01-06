@@ -55,10 +55,8 @@
     />
 
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
-      crossorigin="anonymous"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
     />
     <script
       src="https://kit.fontawesome.com/93b32f94da.js"
@@ -110,7 +108,7 @@
 
         <h2 class="subtitle">Ihr Partner für alles auf Englisch</h2>
       </header>
-      <nav
+      <!-- <nav
         class="navbar navbar-expand-lg sticky-top shadow justify-content-center"
       >
         <div class="container-fluid">
@@ -156,11 +154,56 @@
             </ul>
           </div>
         </div>
-      </nav>
+      </nav> -->
+      <nav class="container">
+        <div class="site-nav">
+          <ul>
+            <li>
+              <a href="#dienstleistungen"
+                ><i class="bi bi-bell site-nav--icon"></i>Dienstleistungen</a
+              >
+            </li>
+            <li>
+              <a href="#portfolio"
+                ><i class="bi bi-gem site-nav--icon"></i>Portfolio</a
+              >
+            </li>
+            <img class="navLogo" src="img/LL2020.webp" alt="Lion Logo" />
+            <li>
+              <a href="#uber"
+                ><i class="bi bi-info-circle site-nav--icon"></i>Über Uns</a
+              >
+            </li>
+            <li>
+              <a href="#angebot"
+                ><i class="bi bi-currency-euro site-nav--icon"></i>Preise</a
+              >
+            </li>
+            <li>
+              <a href="#kontakt"
+                ><i class="bi bi-envelope site-nav--icon"></i>Kontakt</a
+              >
+            </li>
+          </ul>
+        </div>
 
+        <div class="menu-toggle">
+          <div class="hamburger"></div>
+        </div>
+      </nav>
+      <script>
+        document
+          .querySelector('.menu-toggle')
+          .addEventListener('click', function () {
+            document
+              .querySelector('.site-nav')
+              .classList.toggle('site-nav--open');
+            this.classList.toggle('open');
+          });
+      </script>
       <!-- <div id="main-content" class="page-sections"> -->
       <section class="page-section dienstleistungen">
-        <h2 class="section-title" id="Dienstleistungen">
+        <h2 class="section-title" id="dienstleistungen">
           Dienstleistungen<i class="bi bi-bell"></i>
         </h2>
         <!-- New Accordion -->
@@ -262,7 +305,7 @@
         </div>
       </section>
       <section class="page-section portfolio SVGBGLight">
-        <h2 class="section-title light" id="Portfolio">
+        <h2 class="section-title light" id="portfolio">
           Portfolio<i class="bi bi-gem"></i>
         </h2>
 
@@ -331,7 +374,7 @@
       <!-- Price Section Full Screen *************************  -->
       <section class="page-section priceSection SVGBGLight">
         <h2 class="section-title light" id="angebot">
-          Das Angebot<i class="bi bi-trophy"></i>
+          Das Angebot<i class="bi bi-currency-euro"></i>
         </h2>
         <div class="cards">
           <div class="priceCard">
@@ -416,12 +459,6 @@
             </ul>
           </div>
         </div>
-      </section>
-      <!-- Price Section for Mobile ******************** -->
-      <section class="page-section priceSectionMobile SVGBGLight">
-        <h2 class="section-title light" id="angebot">
-          Das Angebot<i class="bi bi-trophy"></i>
-        </h2>
 
         <!-- Price Section Mobile Accordion ***************** -->
         <div class="accContainerMobile">
@@ -542,7 +579,7 @@
             class="contactForm"
             enctype="multipart/form-data"
           >
-            <div class="mb-3">
+            <div class="form-input">
               <label class="form-label" for="name">Name:</label>
               <input
                 type="text"
@@ -553,7 +590,7 @@
                 required
               />
             </div>
-            <div class="mb-3">
+            <div class="form-input">
               <label class="form-label" for="email">Email:</label>
               <input
                 type="email"
@@ -565,7 +602,7 @@
               />
             </div>
 
-            <div class="mb-3">
+            <div class="form-input">
               <label class="form-label" for="message">Anfrage:</label>
 
               <textarea
@@ -661,7 +698,7 @@
           </form>
         </div>
       </section>
-      <!-- </div> -->
+
       <footer class="placeholder-footer SVGBGLight">
         <div class="impressum">
           <p>Impressum: Easterbrook Training</p>
@@ -700,13 +737,6 @@
         </div>
       </footer>
     </main>
-    <!-- partial -->
-    <!-- JavaScript Bundle with Popper -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-      crossorigin="anonymous"
-    ></script>
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"
