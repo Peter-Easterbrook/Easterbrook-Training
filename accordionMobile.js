@@ -8,12 +8,10 @@ for (let i = 0; i < toggleMobile.length; i++) {
       parseInt(contentMobile[i].style.height) !== contentMobile[i].scrollHeight
     ) {
       contentMobile[i].style.height = contentMobile[i].scrollHeight + 'px';
-      toggleMobile[i].style.color = '#fff';
       iconsMobile[i].classList.remove('bi-arrow-down-circle');
       iconsMobile[i].classList.add('bi-arrow-up-circle');
     } else {
       contentMobile[i].style.height = '0px';
-      toggleMobile[i].style.color = '#fff';
       iconsMobile[i].classList.remove('bi-arrow-up-circle');
       iconsMobile[i].classList.add('bi-arrow-down-circle');
       contentMobile[i].classList.remove('heightActive');
@@ -23,7 +21,6 @@ for (let i = 0; i < toggleMobile.length; i++) {
     for (let j = 0; j < contentMobile.length; j++) {
       if (j !== i) {
         contentMobile[j].style.height = 0;
-        toggleMobile[j].style.color = '#fff';
         iconsMobile[j].classList.remove('bi-arrow-up-circle');
         iconsMobile[j].classList.add('bi-arrow-down-circle');
       }
