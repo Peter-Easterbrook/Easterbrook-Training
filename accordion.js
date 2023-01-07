@@ -6,10 +6,12 @@ for (let i = 0; i < toggles.length; i++) {
   toggles[i].addEventListener('click', () => {
     if (parseInt(contentDiv[i].style.height) !== contentDiv[i].scrollHeight) {
       contentDiv[i].style.height = contentDiv[i].scrollHeight + 'px';
+      contentDiv[i].style.border = '1px solid #bbcaf6';
       icons[i].classList.remove('bi-arrow-down-circle');
       icons[i].classList.add('bi-arrow-up-circle');
     } else {
       contentDiv[i].style.height = '0px';
+      contentDiv[i].style.border = 'none';
       icons[i].classList.remove('bi-arrow-up-circle');
       icons[i].classList.add('bi-arrow-down-circle');
       contentDiv[i].classList.remove('heightActive');

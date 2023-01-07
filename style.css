@@ -1115,10 +1115,6 @@ p {
     cursor: pointer;
   }
 
-  /* .priceSectionMobile {
-    display: none;
-  } */
-
   .contactForm {
     margin-right: 5%;
     margin-left: 5%;
@@ -1164,10 +1160,6 @@ p {
     border-radius: 0;
   }
 
-  .accWrapper,
-  .accWrapperMobile {
-    padding: 0.6rem 1rem 1rem;
-  }
   .content,
   .contentMobile {
     border-radius: 0;
