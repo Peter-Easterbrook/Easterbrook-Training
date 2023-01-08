@@ -39,7 +39,8 @@
   --transition: all 0.2s ease-out;
   --filter: drop-shadow(0px 1px 2px rgb(96, 67, 67));
   --transform: scale(1.05);
-  --border: 1px solid #fffff7;
+  --border-light: 1px solid #fffff0;
+  --border: 1px solid #bbcaf6;
 }
 
 html {
@@ -70,6 +71,8 @@ body {
   max-width: 100vw;
   margin: 0;
   user-select: none;
+  overflow-wrap: break-word;
+  hyphens: auto;
   background-color: #fffff7;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23a4acbf' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
   animation: fadeInAnimation 2s ease-out 1 forwards;
@@ -100,8 +103,8 @@ main {
   line-height: 1.5;
   background-color: #4b6587;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3E%3Cg fill='%23bbcaf6' fill-opacity='0.4'%3E%3Cpath fill-rule='evenodd' d='M0 0h4v4H0V0zm4 4h4v4H4V4z'/%3E%3C/g%3E%3C/svg%3E");
-  border: var(--border);
-  box-shadow: var(--box-shadow);
+  border: var(--border-light);
+  box-shadow: var(--box-shadow-high);
 }
 
 h1,
@@ -123,19 +126,6 @@ p {
     padding-left: 12%;
     padding-right: 12%;
   }
-  .title {
-    margin-bottom: -6rem;
-    font-size: 3.5rem;
-  }
-
-  .subtitle {
-    font-size: 2.25rem;
-    margin-top: -6rem;
-  }
-
-  h3 {
-    font-size: 1.5rem;
-  }
 }
 
 .placeholder-section {
@@ -144,6 +134,14 @@ p {
   height: 50vh;
   text-align: center;
   background: repeating-conic-gradient(ivory, #e3e0cf 20deg);
+}
+.title {
+  font-size: clamp(2rem, 4vw, 4.5rem);
+  margin: 2rem 0;
+}
+.subtitle {
+  font-size: clamp(1.5rem, 2vw, 3rem);
+  margin: 2rem 0 3rem;
 }
 
 .shield-top {
@@ -162,51 +160,6 @@ p {
   font-style: italic;
 }
 /* Navbar --------------- */
-/* .navbar {
-  background-color: #fffff0;
-}
-.nav-icon {
-  filter: var(--filter);
-}
-.navbar-nav {
-  margin: 0 auto;
-}
-.navbar-nav img {
-  width: 50px;
-  height: 50px;
-  margin: auto 1.2rem;
-}
-.navbar-nav a {
-  overflow: hidden;
-  padding: 1rem 2rem;
-}
-.navbar-nav a {
-  position: relative;
-  font-size: 1.2rem;
-  font-weight: 400;
-  color: #000;
-  text-decoration: none;
-  text-shadow: var(--text-shadow);
-  transition: var(--transition);
-}
-.navbar-nav a::after {
-  display: block;
-  content: '';
-  position: absolute;
-
-  width: 100%;
-  height: 2px;
-  margin-bottom: 0;
-  background-color: #748597;
-  transform: translateX(-112%);
-  transition: var(--transition);
-}
-.navbar-nav a:hover::after {
-  transform: translateX(-10%);
-}
-.navbar-toggler:focus {
-  box-shadow: none;
-} */
 
 .container {
   position: sticky;
@@ -443,7 +396,7 @@ p {
   );
   max-width: 45rem;
   margin: 3rem auto;
-  border: var(--border);
+  border: var(--border-light);
   box-shadow: var(--box-shadow);
   transition: var(--transition);
 }
@@ -590,7 +543,7 @@ p {
   width: 210px;
   height: 80px;
   border-radius: 3rem;
-  border: var(--border);
+  border: var(--border-light);
   box-shadow: var(--box-shadow);
 }
 
@@ -804,7 +757,7 @@ p {
     border: none;
     outline: none;
     cursor: pointer;
-    border-bottom: var(--border);
+    border-bottom: var(--border-light);
   }
   .toggleMobile.last {
     border-bottom: none;
@@ -922,7 +875,7 @@ p {
   justify-content: center;
   overflow: hidden;
   outline: none;
-  border: 1px solid #fffff0;
+  border: var(--border);
   border-radius: 3rem;
   font-weight: 200;
   font-size: 1rem;
@@ -967,7 +920,7 @@ p {
   display: grid;
   place-items: center;
   width: fit-content;
-  border: var(--border);
+  border: var(--border-light);
   background: linear-gradient(
     180deg,
     #fffff0,
@@ -1054,14 +1007,6 @@ p {
     display: grid;
     place-items: center;
   }
-  .title {
-    font-size: 3rem;
-    margin-bottom: -4rem;
-  }
-  .subtitle {
-    font-size: 2rem;
-    margin-top: -4rem;
-  }
   .shield-top {
     width: 130px;
     height: auto;
@@ -1087,14 +1032,7 @@ p {
   html::-webkit-scrollbar {
     display: none;
   }
-  .title {
-    font-size: 2.5rem;
-    margin-bottom: -5rem;
-  }
-  .subtitle {
-    font-size: 1.5rem;
-    margin-top: -3rem;
-  }
+
   .shield-top {
     width: 120px;
     height: auto;
@@ -1144,7 +1082,7 @@ p {
   }
 
   .shield-top {
-    width: 110px;
+    width: 90px;
     height: auto;
   }
   .shield {
@@ -1204,13 +1142,6 @@ p {
   }
 }
 @media screen and (max-width: 25rem) {
-  .title {
-    font-size: 2rem;
-  }
-  .subtitle {
-    font-size: 1.4rem;
-  }
-
   .section-title {
     font-size: 1.6rem;
   }
@@ -1220,13 +1151,5 @@ p {
   .logo {
     width: 252px;
     height: 96px;
-  }
-}
-@media screen and (max-width: 22rem) {
-  .title {
-    font-size: 1.8rem;
-  }
-  .subtitle {
-    font-size: 1.4rem;
   }
 }
