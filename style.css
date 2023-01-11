@@ -481,6 +481,7 @@ p {
 
 .icon,
 .accHeader {
+  padding: 1rem 0;
   font-size: clamp(1.2rem, 1.6vw, 1.4rem);
   color: #000;
   font-weight: lighter;
@@ -722,16 +723,6 @@ p {
     border-color: #ccc #ccc #fffff7 #ccc;
     box-shadow: var(--box-shadow-light);
     transition: var(--transition);
-    animation: fade-slide-in 1s ease-out forwards;
-  }
-  @keyframes fade-slide-in {
-    from {
-      opacity: 0;
-      transform: translateY(4rem);
-    }
-    to {
-      opacity: 1;
-    }
   }
 
   .accContainerMobile * {
@@ -739,8 +730,8 @@ p {
   }
 
   .accWrapperMobile {
-    padding: 0 2rem;
-    margin: 0 1rem;
+    padding: 0 0.6rem;
+    margin: 0 0.4rem;
     outline: none;
     box-shadow: none;
   }
@@ -767,7 +758,9 @@ p {
   .accHeaderMobile {
     font-size: 1.2rem;
     color: #000;
+    padding: 1rem 0;
     font-weight: lighter;
+    font-smooth: always;
     text-shadow: var(--text-shadow);
   }
 
@@ -810,7 +803,7 @@ p {
     #bbcaf6
   );
   border-radius: 2rem;
-  padding: 40px;
+  padding: 3rem;
   margin-right: 10%;
   margin-left: 10%;
   color: #000;
@@ -1093,13 +1086,15 @@ p {
     margin: 4rem 0;
     border-radius: 0;
   }
-  .accContainer,
-  .accContainerMobile {
+  .accContainer {
     border-radius: 0;
   }
+  .accWrapper {
+    padding: 0 0.6rem;
+    margin: 0 0.4rem;
+  }
 
-  .content,
-  .contentMobile {
+  .content {
     border-radius: 0;
   }
 
@@ -1108,6 +1103,7 @@ p {
   }
 
   .contactForm {
+    padding: 1rem;
     margin-right: 0%;
     margin-left: 0%;
     margin-bottom: 2rem;
