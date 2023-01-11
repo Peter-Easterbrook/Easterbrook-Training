@@ -1088,6 +1088,7 @@ p {
   }
   .accContainer {
     border-radius: 0;
+    animation: none;
   }
   .accWrapper {
     padding: 0 0.6rem;
