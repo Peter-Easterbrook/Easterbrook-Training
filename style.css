@@ -36,8 +36,8 @@
   --thumbBG: #43464b;
   --width: 70px;
   --angle: 0deg;
-  --enter-transition: all 350ms ease-in;
-  --exit-transition: all 200ms ease-out;
+  --exit-transition: all 350ms ease-in;
+  --enter-transition: all 200ms ease-out;
   --filter: drop-shadow(0px 1px 2px rgb(96, 67, 67));
   --transform: scale(1.05);
   --border-light: 1px solid #fffff0;
@@ -438,7 +438,7 @@ p {
   box-shadow: var(--box-shadow-light);
 }
 .accContainer * {
-  transition: var(--transition);
+  transition: var(--exit-transition);
 }
 .accContainer:hover {
   box-shadow: var(--box-shadow-high-light);
@@ -448,9 +448,6 @@ p {
 .accWrapper {
   padding: 0 2rem;
   margin: 0 1rem;
-  outline: none;
-  box-shadow: none;
-  transition: var(--exit-transition);
 }
 .accWrapper:first-of-type {
   padding-top: 1rem;
@@ -462,7 +459,6 @@ p {
 .accWrapper:hover {
   outline: none;
   box-shadow: none;
-  transition: var(--enter-transition);
 }
 
 .toggle {
@@ -511,7 +507,7 @@ p {
   background-color: #3d526e;
   border-radius: 0.3rem;
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.4);
-  transition: var(--exit-transition);
+  transition: var(--enter-transition);
 }
 .content p {
   color: #fff;
@@ -685,12 +681,12 @@ p {
 
   .priceCard:hover {
     transform: translateY(-1rem);
-    transition: var(--exit-transition);
+    transition: var(--enter-transition);
   }
 
   .priceCard:hover ~ .priceCard {
     transform: translateX(12rem);
-    transition: var(--exit-transition);
+    transition: var(--enter-transition);
   }
 }
 
@@ -729,10 +725,6 @@ p {
     border: 1px solid;
     border-color: #ccc #ccc #fffff7 #ccc;
     box-shadow: var(--box-shadow-light);
-    transition: var(--enter-transition);
-  }
-
-  .accContainerMobile * {
     transition: var(--exit-transition);
   }
 
@@ -1118,6 +1110,7 @@ p {
   }
   .contactForm:hover {
     transform: none;
+    box-shadow: none;
   }
 
   .shield-flip {
