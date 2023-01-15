@@ -36,7 +36,8 @@
   --thumbBG: #43464b;
   --width: 70px;
   --angle: 0deg;
-  --transition: all 0.2s ease-out;
+  --enter-transition: all 350ms ease-in;
+  --exit-transition: all 200ms ease-out;
   --filter: drop-shadow(0px 1px 2px rgb(96, 67, 67));
   --transform: scale(1.05);
   --border-light: 1px solid #fffff0;
@@ -80,6 +81,7 @@ body {
 @keyframes fadeInAnimation {
   0% {
     opacity: 0;
+    transform: translateY(4rem);
   }
   100% {
     opacity: 1;
@@ -148,12 +150,13 @@ p {
   margin: 0 auto;
   width: 140px;
   height: 140px;
-  transition: var(--transition);
+  transition: var(--exit-transition);
 }
 
 .shield-top:hover {
   transform: scale(1.05);
   cursor: pointer;
+  transition: var(--enter-transition);
 }
 
 .subtitle {
@@ -224,12 +227,14 @@ p {
   text-transform: capitalize;
   text-shadow: var(--text-shadow);
   text-decoration: none;
+  transition: var(--exit-transition);
 }
 
 .site-nav a:hover,
 .site-nav a:focus {
   background-color: #dddac1;
   color: #464655;
+  transition: var(--enter-transition);
 }
 
 .site-nav--icon {
@@ -258,7 +263,7 @@ p {
   height: 3px;
   width: 1.75em;
   border-radius: 3px;
-  transition: all 500ms ease-out;
+  transition: var(--enter-transition);
 }
 
 .hamburger::before {
@@ -314,11 +319,13 @@ p {
     padding: 0;
     color: #000;
     margin-left: 2em;
+    transition: var(--exit-transition);
   }
 
   .site-nav a:hover,
   .site-nav a:focus {
     background: transparent;
+    transition: var(--enter-transition);
   }
 
   .site-nav--icon {
@@ -370,12 +377,13 @@ p {
   );
   border: var(--border);
   box-shadow: var(--box-shadow-light);
-  transition: var(--transition);
+  transition: var(--exit-transition);
 }
 .section-title:hover {
   font-weight: lighter;
   transform: scale(1.05);
   box-shadow: var(--box-shadow-high-light);
+  transition: var(--enter-transition);
 }
 .section-title.light {
   background: linear-gradient(
@@ -398,11 +406,12 @@ p {
   margin: 3rem auto;
   border: var(--border-light);
   box-shadow: var(--box-shadow);
-  transition: var(--transition);
+  transition: var(--exit-transition);
 }
 
 .section-title.light:hover {
   box-shadow: var(--box-shadow-high);
+  transition: var(--enter-transition);
 }
 .SVGBGLight {
   background-color: #fffff0;
@@ -427,23 +436,13 @@ p {
   );
   border: var(--border);
   box-shadow: var(--box-shadow-light);
-  animation: fade-slide-in 1s ease-out forwards;
-}
-@keyframes fade-slide-in {
-  from {
-    opacity: 0;
-    transform: translateY(4rem);
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.accContainer:hover {
-  box-shadow: var(--box-shadow-high-light);
 }
 .accContainer * {
   transition: var(--transition);
+}
+.accContainer:hover {
+  box-shadow: var(--box-shadow-high-light);
+  transition: var(--enter-transition);
 }
 
 .accWrapper {
@@ -451,6 +450,7 @@ p {
   margin: 0 1rem;
   outline: none;
   box-shadow: none;
+  transition: var(--exit-transition);
 }
 .accWrapper:first-of-type {
   padding-top: 1rem;
@@ -462,6 +462,7 @@ p {
 .accWrapper:hover {
   outline: none;
   box-shadow: none;
+  transition: var(--enter-transition);
 }
 
 .toggle {
@@ -479,14 +480,15 @@ p {
   border-bottom: none;
 }
 
-.icon,
-.accHeader {
+.toggle .icon,
+.toggle .accHeader {
   padding: 1rem 0;
   font-size: clamp(1.2rem, 1.6vw, 1.4rem);
   color: #000;
   font-weight: lighter;
   font-smooth: always;
   text-shadow: var(--text-shadow);
+  transition: var(--exit-transition);
 }
 .accHeader .flag {
   vertical-align: middle;
@@ -496,6 +498,7 @@ p {
   color: #fff;
   font-weight: lighter;
   cursor: pointer;
+  transition: var(--enter-transition);
 }
 .flag {
   width: 2rem;
@@ -508,6 +511,7 @@ p {
   background-color: #3d526e;
   border-radius: 0.3rem;
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.4);
+  transition: var(--exit-transition);
 }
 .content p {
   color: #fff;
@@ -606,7 +610,7 @@ p {
   cursor: pointer;
   perspective: 1000px;
   box-shadow: var(--box-shadow-light);
-  transition: var(--transition);
+  transition: var(--exit-transition);
 }
 
 .scale .oneContainer .one:hover {
@@ -614,6 +618,7 @@ p {
   background: #fff;
   box-shadow: var(--box-shadow-high);
   transform: scale(1.2);
+  transition: var(--enter-transition);
 }
 
 /*-------------Price Cards------------*/
@@ -657,7 +662,7 @@ p {
     text-shadow: var(--text-shadow);
     box-shadow: -2rem 1rem 2rem -2rem rgba(0, 0, 0, 0.4);
     cursor: pointer;
-    transition: var(--transition);
+    transition: var(--exit-transition);
   }
   .priceCardHeader {
     padding-left: 1rem;
@@ -680,10 +685,12 @@ p {
 
   .priceCard:hover {
     transform: translateY(-1rem);
+    transition: var(--exit-transition);
   }
 
   .priceCard:hover ~ .priceCard {
     transform: translateX(12rem);
+    transition: var(--exit-transition);
   }
 }
 
@@ -722,11 +729,11 @@ p {
     border: 1px solid;
     border-color: #ccc #ccc #fffff7 #ccc;
     box-shadow: var(--box-shadow-light);
-    transition: var(--transition);
+    transition: var(--enter-transition);
   }
 
   .accContainerMobile * {
-    transition: var(--transition);
+    transition: var(--exit-transition);
   }
 
   .accWrapperMobile {
@@ -765,14 +772,16 @@ p {
   }
 
   .contentMobile {
+    will-change: transform;
     font-size: 1rem;
     height: 0;
     overflow: hidden;
-    background-color: #b0a879;
+    background-color: #917948;
     border-radius: 0;
     font-smooth: always;
     text-shadow: var(--text-shadow-dark);
     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.6);
+    transition: var(--enter-transition);
   }
 
   .contentMobile.last {
@@ -809,40 +818,35 @@ p {
   color: #000;
   border: var(--border);
   box-shadow: var(--box-shadow-light);
-  transition: var(--transition);
+  transition: var(--exit-transition);
 }
 .contactForm:hover {
   transform: scale(1.05);
   box-shadow: var(--box-shadow-high-light);
+  transition: var(--enter-transition);
 }
 .formContainer .form-label {
   font-size: 1.2rem;
   font-weight: lighter;
   color: #000;
   text-shadow: var(--text-shadow);
-  transition: var(--transition);
-}
-.formContainer input,
-.formContainer textarea {
-  margin-top: 0.5rem;
-  border: 1px solid #fffff0;
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 .formContainer input,
 .formContainer textarea {
   border-radius: 2rem;
   padding: 1rem;
-  margin-bottom: 1rem;
+  margin: 0.5rem 0 1rem;
   width: 100%;
   font-size: 1rem;
   font-weight: 200;
   font-family: var(--font-family);
   color: #000;
   background-color: #fffff0;
+  border: 1px solid #fffff0;
   outline: none;
   text-shadow: var(--text-shadow);
-  transition: var(--transition);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 .formContainer input:hover,
 .formContainer input:active,
@@ -863,9 +867,8 @@ p {
     #a8b8e2,
     #bbcaf6
   );
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  place-items: center;
   overflow: hidden;
   outline: none;
   border: var(--border);
@@ -877,7 +880,7 @@ p {
   width: 5rem;
   box-shadow: var(--box-shadow);
   cursor: pointer;
-  transition: var(--transition);
+  transition: var(--exit-transition);
 }
 
 .custom-btn:hover,
@@ -886,10 +889,11 @@ p {
   box-shadow: var(--box-shadow-high);
 }
 .custom-btn #svg {
-  transition: var(--transition);
+  transition: var(--exit-transition);
 }
 .custom-btn:hover #svg {
   fill: #fff;
+  transition: var(--enter-transition);
 }
 .custom-btn:hover #svg .svgPoly {
   fill: #3d526e !important;

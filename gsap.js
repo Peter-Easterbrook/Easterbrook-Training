@@ -16,7 +16,7 @@ mm.add('(min-width: 800px)', () => {
   gsap.from('.formContainer', {
     scrollTrigger: {
       trigger: '#angebot',
-      start: 'top top-=400',
+      start: 'top top-=500',
       end: '=+380',
       // markers: true,
       scrub: 1,
