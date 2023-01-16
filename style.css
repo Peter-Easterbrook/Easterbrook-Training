@@ -319,13 +319,13 @@ p {
     padding: 0;
     color: #000;
     margin-left: 2em;
-    transition: var(--exit-transition);
+    /* transition: var(--exit-transition); */
   }
 
   .site-nav a:hover,
   .site-nav a:focus {
     background: transparent;
-    transition: var(--enter-transition);
+    /* transition: var(--enter-transition); */
   }
 
   .site-nav--icon {
