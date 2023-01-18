@@ -327,6 +327,7 @@ p {
     border: none;
     vertical-align: middle;
     overflow: hidden;
+    transform-style: preserve-3d;
     transition: var(--exit-transition);
   }
 
