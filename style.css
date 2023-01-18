@@ -195,9 +195,13 @@ p {
   position: absolute;
   top: 100%;
   right: 0%;
+  width: 100%;
   background-color: #fffff0;
   clip-path: circle(0px at top right);
   transition: clip-path ease-in-out 700ms;
+}
+.site-nav .main-text {
+  display: none;
 }
 
 .site-nav--open {
@@ -224,7 +228,6 @@ p {
   display: block;
   padding: 1em 4em 1em 1.5em;
   font-size: 1.4rem;
-  text-transform: capitalize;
   text-shadow: var(--text-shadow);
   text-decoration: none;
   transition: var(--exit-transition);
@@ -285,9 +288,9 @@ p {
 .open .hamburger::after {
   transform: translateY(-3px) rotate(-90deg);
 }
-@media screen and (min-width: 54rem) {
+@media screen and (min-width: 47rem) {
   .container {
-    padding: 0.6rem;
+    padding: 0.4rem;
   }
   .menu-toggle {
     display: none;
@@ -301,6 +304,7 @@ p {
     float: right;
     clip-path: initial;
     margin-left: -0.2rem;
+    overflow: hidden;
   }
 
   .navLogo {
@@ -310,22 +314,55 @@ p {
     margin-left: 2rem;
     vertical-align: middle;
   }
+  .site-nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
   .site-nav li {
     display: inline-block;
     border: none;
+    vertical-align: middle;
+    overflow: hidden;
+    transition: var(--exit-transition);
   }
 
-  .site-nav a {
+  .site-nav .main-text {
+    position: absolute;
+    display: block;
+    transform: translateY(0%);
+    padding-bottom: 1rem;
+    color: #000;
+    margin-left: 2em;
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-shadow: var(--text-shadow);
+    cursor: pointer;
+    transition: var(--exit-transition);
+  }
+  .site-nav li:hover .main-text {
+    transform: translateY(-120%);
+    transition: var(--enter-transition);
+  }
+  .site-nav li:hover a {
+    transform: translateY(0%);
+    background: transparent;
+    transition: var(--enter-transition);
+  }
+
+  .site-nav li a {
+    position: relative;
+    transform: translateY(100%);
     padding: 0;
     color: #000;
     margin-left: 2em;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
     /* transition: var(--exit-transition); */
-  }
-
-  .site-nav a:hover,
-  .site-nav a:focus {
-    background: transparent;
-    /* transition: var(--enter-transition); */
   }
 
   .site-nav--icon {
