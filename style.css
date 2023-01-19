@@ -378,23 +378,21 @@ p {
 
 .page-section {
   /* margin: calc(var(--space) * 2) 0; */
-  padding: calc(var(--space) * 2) var(--space);
+  padding: calc(var(--space) * 1.2) var(--space);
   /* scroll-snap-align: start; */
   max-width: var(--page-width);
   margin: 1rem auto;
 }
 
-.page-section > * + * {
-  margin-top: calc(var(--space) * 2);
-}
-
 .section-title {
+  max-width: 44rem;
   display: flex;
   justify-content: space-between;
-  margin: 2rem auto;
-  padding: 1rem 2rem;
+  padding: clamp(0.6rem, 3vw, 0.8rem) clamp(0.6rem, 3vw, 3rem);
   border-radius: 3rem;
-  font-weight: lighter;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 400;
+  margin: 3rem auto;
   background: linear-gradient(
     0deg,
     #3d526e,
@@ -418,12 +416,18 @@ p {
   transition: var(--exit-transition);
 }
 .section-title:hover {
-  font-weight: lighter;
   transform: scale(1.05);
   box-shadow: var(--box-shadow-high-light);
   transition: var(--enter-transition);
 }
 .section-title.light {
+  max-width: 44rem;
+  display: flex;
+  justify-content: space-between;
+  padding: clamp(0.6rem, 3vw, 0.8rem) clamp(0.6rem, 3vw, 3rem);
+  border-radius: 3rem;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 400;
   background: linear-gradient(
     180deg,
     #cdc8aa,
@@ -440,8 +444,7 @@ p {
     #d5d1b5,
     #cdc8aa
   );
-  max-width: 45rem;
-  margin: 3rem auto;
+
   border: var(--border-light);
   box-shadow: var(--box-shadow);
   transition: var(--exit-transition);
@@ -1103,6 +1106,7 @@ p {
 @media screen and (max-width: 37.5rem) {
   .page-section {
     padding: 0;
+    margin: 0 auto;
   }
   #main-content,
   html {
@@ -1119,8 +1123,20 @@ p {
     width: 70px;
   }
   .section-title {
-    margin: 4rem 0;
+    margin: 0 0 1rem 0;
     border-radius: 0;
+    padding: 0.6rem;
+    box-shadow: none;
+  }
+  .section-title:hover {
+    transform: none;
+    box-shadow: none;
+  }
+  .section-title.light {
+    margin: 0 0 1rem 0;
+    border-radius: 0;
+    padding: 0.6rem;
+    box-shadow: none;
   }
   .accContainer {
     border-radius: 0;
@@ -1176,12 +1192,6 @@ p {
   }
 }
 @media screen and (max-width: 25rem) {
-  .section-title {
-    font-size: 1.6rem;
-  }
-  .my-auto {
-    font-size: 1.2rem;
-  }
   .logo {
     width: 252px;
     height: 96px;
