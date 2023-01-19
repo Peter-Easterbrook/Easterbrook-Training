@@ -474,10 +474,9 @@ p {
   );
   border: var(--border);
   box-shadow: var(--box-shadow-light);
-}
-.accContainer * {
   transition: var(--exit-transition);
 }
+
 .accContainer:hover {
   box-shadow: var(--box-shadow-high-light);
   transition: var(--enter-transition);
@@ -643,6 +642,7 @@ p {
   border: var(--border);
   cursor: pointer;
   perspective: 1000px;
+  transform-style: preserve-3d;
   box-shadow: var(--box-shadow-light);
   transition: var(--exit-transition);
 }
@@ -733,9 +733,11 @@ p {
   .scale .oneContainer .one {
     border-radius: 0;
     text-align: center;
+    box-shadow: none;
   }
   .scale .oneContainer .one:hover {
     transform: none;
+    box-shadow: none;
   }
   /* Price Cards Mobile Accordion **************** */
   .cards {

@@ -11,18 +11,18 @@ gsap.from('.logo', {
   ease: 'back.out(1.7)',
 });
 
-let mm = gsap.matchMedia();
-mm.add('(min-width: 800px)', () => {
-  gsap.from('.formContainer', {
-    scrollTrigger: {
-      trigger: '#angebot',
-      start: 'top top-=500',
-      end: '=+380',
-      // markers: true,
-      scrub: 1,
-    },
-    scale: 0,
-    duration: 3,
-    ease: 'power4.out',
-  });
-});
+// let mm = gsap.matchMedia();
+// mm.add('(min-width: 800px)', () => {
+//   gsap.from('.formContainer', {
+//     scrollTrigger: {
+//       trigger: '#angebot',
+//       start: 'top top-=500',
+//       end: '=+380',
+//       // markers: true,
+//       scrub: 1,
+//     },
+//     scale: 0,
+//     duration: 3,
+//     ease: 'power4.out',
+//   });
+// });
