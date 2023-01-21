@@ -56,7 +56,7 @@ html {
 @media (prefers-reduced-motion: no-preference) {
   html {
     scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;
+    scroll-snap-type: y proximity;
   }
 }
 
@@ -968,7 +968,7 @@ p {
     #cdc8aa
   );
   padding: 2rem;
-  margin: 2rem auto;
+  margin: 4rem auto;
   border-radius: 2rem;
   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.4);
 }
