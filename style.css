@@ -639,6 +639,7 @@ p {
 /*---------About section---------------*/
 
 .scale .oneContainer .one {
+  text-indent: 2em;
   color: #fff;
   font-weight: lighter;
   background: #4b6587;
