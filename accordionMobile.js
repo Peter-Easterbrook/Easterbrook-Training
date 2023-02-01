@@ -8,7 +8,7 @@ for (let i = 0; i < toggleMobile.length; i++) {
       parseInt(contentMobile[i].style.height) !== contentMobile[i].scrollHeight
     ) {
       contentMobile[i].style.height = contentMobile[i].scrollHeight + 'px';
-      contentDiv[i].style.border = '1px solid #fffff7';
+      contentMobile[i].style.border = '1px solid #fffff7';
       iconsMobile[i].style.transform = 'rotate(180deg)';
     } else {
       contentMobile[i].style.height = '0px';

@@ -8,14 +8,10 @@ for (let i = 0; i < toggles.length; i++) {
       contentDiv[i].style.height = contentDiv[i].scrollHeight + 'px';
       contentDiv[i].style.border = '1px solid #bbcaf6';
       icons[i].style.transform = 'rotate(180deg)';
-      // icons[i].classList.remove('bi-arrow-down-circle');
-      // icons[i].classList.add('bi-arrow-up-circle');
     } else {
       contentDiv[i].style.height = '0px';
       contentDiv[i].style.border = 'none';
       icons[i].style.transform = 'rotate(0deg)';
-      // icons[i].classList.remove('bi-arrow-up-circle');
-      // icons[i].classList.add('bi-arrow-down-circle');
       contentDiv[i].classList.remove('heightActive');
       contentDiv[i].classList.add('heightActive');
     }
@@ -25,8 +21,6 @@ for (let i = 0; i < toggles.length; i++) {
         contentDiv[j].style.height = 0;
         contentDiv[j].style.border = 'none';
         icons[j].style.transform = 'rotate(0deg)';
-        // icons[j].classList.remove('bi-arrow-up-circle');
-        // icons[j].classList.add('bi-arrow-down-circle');
       }
     }
   });
