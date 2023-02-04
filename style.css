@@ -645,7 +645,7 @@ p {
   margin: 4rem auto 6rem;
   width: 40rem;
   height: 16rem;
-  padding: 2rem 3rem 3rem 2rem;
+  padding: 2rem 3rem 1rem 2rem;
   overflow-y: auto;
 }
 
@@ -686,7 +686,7 @@ p {
   top: 0;
   color: #fff;
   padding-left: 0;
-  margin-left: 0;
+  margin-left: -1rem;
   transition: var(--exit-transition);
 }
 
@@ -701,7 +701,7 @@ p {
   font-weight: lighter;
   background: #4b6587;
   padding: 2rem 1rem 1rem;
-  margin: 3rem auto;
+  margin: 3.5rem auto;
   border-radius: 3rem;
   font-smooth: always;
   border: var(--border);
@@ -713,13 +713,14 @@ p {
 }
 .wrapper div:last-of-type {
   padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-bottom: 0;
   margin-bottom: 0;
 }
 
 .about p {
   flex: 1;
   margin-left: 2rem;
+  padding-right: 1rem;
 }
 .about:hover {
   color: #000;
