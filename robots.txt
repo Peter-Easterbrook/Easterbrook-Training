@@ -1,4 +1,4 @@
 user-agent: Googlebot-Image
 disallow: / 
 
-Sitemap: https://pe-wd-resume.vercel.app/sitemap.xml
+Sitemap: http://www.easterbrook.at/sitemap.xml
