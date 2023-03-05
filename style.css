@@ -379,12 +379,13 @@ p {
   }
   .priceSection {
     margin: 0 auto;
-    max-width: 100vw;
+    width: 100%;
   }
   .cards {
     display: flex;
     justify-content: center;
     flex-wrap: nowrap;
+    max-width: 40rem;
     margin: 0 auto;
     padding: 2rem 0;
   }
@@ -454,7 +455,7 @@ p {
   /* margin: calc(var(--space) * 2) 0; */
   padding: calc(var(--space) * 1.2) var(--space);
   scroll-snap-align: start;
-  max-width: var(--page-width);
+  /* max-width: var(--page-width); */
   margin: 1rem auto;
 }
 
@@ -1042,8 +1043,8 @@ p {
   );
   border-radius: 2rem;
   padding: 3rem;
-  margin-right: 10%;
-  margin-left: 10%;
+  max-width: 40rem;
+  margin: 0 auto;
   color: #000;
   border: var(--border);
   box-shadow: var(--box-shadow-light);
@@ -1273,16 +1274,12 @@ p {
     box-shadow: -0.6rem 0.4rem 0.6rem -0.6rem rgba(0, 0, 0, 0.3);
   }
 
-  .cards {
+  /* .cards {
     overflow-x: scroll;
     overflow-y: hidden;
     cursor: pointer;
-  }
+  } */
 
-  .contactForm {
-    margin-right: 5%;
-    margin-left: 5%;
-  }
   .shield-flip {
     width: 80px;
     height: auto;
@@ -1318,6 +1315,7 @@ p {
   }
   .section-title {
     /* margin: 0 0 1rem 0; */
+    max-width: 100%;
     margin: 0;
     border-radius: 0;
     padding: 0.6rem;
@@ -1328,6 +1326,7 @@ p {
     box-shadow: none;
   }
   .section-title.light {
+    max-width: 100%;
     margin: 0 0 1rem 0;
     margin: 0;
     border-radius: 0;
@@ -1379,7 +1378,7 @@ p {
   }
   .priceSectionMobile {
     margin: 0 auto;
-    max-width: 100vw;
+    /* max-width: 100vw; */
   }
 
   .accContainerMobile {
@@ -1471,9 +1470,6 @@ p {
 
   .contactForm {
     padding: 1rem;
-    margin-right: 0%;
-    margin-left: 0%;
-    /* margin-bottom: 2rem; */
     border-left: none;
     border-right: none;
     border-radius: 0;
