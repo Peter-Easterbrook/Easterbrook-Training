@@ -1,4 +1,4 @@
 user-agent: Googlebot-Image
-disallow: / 
+Disallow: /*.gif$
 
 Sitemap: http://www.easterbrook.at/sitemap.xml
