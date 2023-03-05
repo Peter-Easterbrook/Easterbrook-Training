@@ -45,6 +45,7 @@
 }
 @media (min-width: 500px) {
   html {
+    box-sizing: border-box;
     scrollbar-width: thin;
     scrollbar-color: var(--thumbBG) var(--scrollbarBG);
     scroll-padding-top: 4rem;
@@ -62,11 +63,10 @@
     border: 3px solid var(--scrollbarBG);
   }
 }
-html {
-  box-sizing: border-box;
-  scroll-padding-top: 3rem;
-  scrollbar-width: thin;
-  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+@media (max-width: 499px) {
+  html {
+    scroll-padding-top: 3rem;
+  }
 }
 * {
   font-family: 'Philosopher', sans-serif;
@@ -1043,7 +1043,7 @@ p {
   );
   border-radius: 2rem;
   padding: 3rem;
-  max-width: 40rem;
+  max-width: 30rem;
   margin: 0 auto;
   color: #000;
   border: var(--border);
@@ -1470,8 +1470,7 @@ p {
 
   .contactForm {
     padding: 1rem;
-    border-left: none;
-    border-right: none;
+    border: none;
     border-radius: 0;
   }
   .contactForm:hover {
