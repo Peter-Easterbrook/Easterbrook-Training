@@ -168,7 +168,7 @@ p {
 
 .container {
   position: sticky;
-  width: 100%;
+  max-width: 100%;
   top: 0;
   left: 0;
   margin: 0 auto;
@@ -1043,7 +1043,7 @@ p {
   );
   border-radius: 2rem;
   padding: 3rem;
-  max-width: 30rem;
+  max-width: 28rem;
   margin: 0 auto;
   color: #000;
   border: var(--border);
@@ -1055,19 +1055,19 @@ p {
   box-shadow: var(--box-shadow-high-light);
   transition: var(--enter-transition);
 }
-.formContainer .form-label {
+.form-label {
   font-size: 1.2rem;
   font-weight: lighter;
   color: #000;
   text-shadow: var(--text-shadow);
 }
 
-.formContainer input,
-.formContainer textarea {
+input,
+textarea {
   border-radius: 2rem;
   padding: 1rem;
   margin: 0.5rem 0 1rem;
-  width: 100%;
+  width: 90%;
   font-size: 1rem;
   font-weight: 200;
   font-family: var(--font-family);
@@ -1078,10 +1078,10 @@ p {
   text-shadow: var(--text-shadow);
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.4);
 }
-.formContainer input:hover,
-.formContainer input:active,
-.formContainer textarea:hover,
-.formContainer textarea:active {
+input:hover,
+input:active,
+textarea:hover,
+textarea:active {
   outline: none;
 }
 
@@ -1469,7 +1469,7 @@ p {
   }
 
   .contactForm {
-    padding: 1rem;
+    padding: 2rem;
     border: none;
     border-radius: 0;
   }
@@ -1500,6 +1500,9 @@ p {
   }
 }
 @media screen and (max-width: 480px) {
+  .contactForm {
+    padding: 1rem;
+  }
   .logo {
     width: 252px;
     height: 96px;
