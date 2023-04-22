@@ -1055,7 +1055,7 @@ p {
   box-shadow: var(--box-shadow-high-light);
   transition: var(--enter-transition);
 }
-.form-label {
+/* .form-label {
   font-size: 1.2rem;
   font-weight: lighter;
   color: #000;
@@ -1089,6 +1089,48 @@ input:active,
 textarea:hover,
 textarea:active {
   outline: none;
+} */
+
+.form-control {
+  position: relative;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.form-control input {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px rgba(255, 255, 255, 0.5) solid;
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+.form-control input:focus,
+.form-control input:valid {
+  outline: 0;
+  border-bottom-color: lightblue;
+}
+
+.form-control label {
+  position: absolute;
+  top: 1rem;
+  left: 0;
+}
+
+.form-control label span {
+  display: inline-block;
+  font-size: 1.2rem;
+  min-width: 5px;
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-control input:focus + label span,
+.form-control input:valid + label span {
+  color: #3d526e;
+  transform: translateY(-30px);
 }
 
 .custom-btn {

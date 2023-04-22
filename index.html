@@ -588,40 +588,21 @@
           class="contactForm"
           enctype="multipart/form-data"
         >
-          <div class="form-input">
-            <label class="form-label" for="name">Name:</label>
-            <input
-              type="text"
-              class="form-control"
-              id="name"
-              name="cf_name"
-              placeholder="Ihre Name"
-              required
-            />
+          <div class="form-control">
+            <input type="text" id="name" name="cf_name" required />
+            <label for="name">Name:</label>
           </div>
-          <div class="form-input">
-            <label class="form-label" for="email">Email:</label>
-            <input
-              type="email"
-              class="form-control"
-              id="email"
-              name="cf_email"
-              placeholder="name@domain.at"
-              required
-            />
+          <div class="form-control">
+            <input type="text" id="email" name="cf_email" required />
+            <label for="email">Email:</label>
           </div>
-
-          <div class="form-input">
-            <label class="form-label" for="message">Anfrage:</label>
-
-            <textarea
-              class="form-control"
-              rows="5"
-              id="message"
-              name="cf_message"
-              placeholder="Ihre Anfrage"
-              required
-            ></textarea>
+          <div class="form-control">
+            <input type="text" id="subject" name="cf_subject" required />
+            <label for="subject">Betreff:</label>
+          </div>
+          <div class="form-control">
+            <input id="message" name="cf_message" required />
+            <label for="message">Anfrage:</label>
           </div>
           <button
             type="submit"
@@ -705,6 +686,7 @@
             </svg>
           </button>
         </form>
+        <script src="contact.js"></script>
       </section>
 
       <footer class="placeholder-footer SVGBGLight">
@@ -745,7 +727,6 @@
         </div>
       </footer>
     </main>
-
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"
       integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw=="
