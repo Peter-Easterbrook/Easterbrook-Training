@@ -766,23 +766,32 @@ p {
     #3d526e
   );
 }
-
+@property --color-1 {
+  syntax: '<color>';
+  initial-value: #7083a6;
+  inherits: true;
+}
+@property --color-2 {
+  syntax: '<color>';
+  initial-value: #3d526e;
+  inherits: true;
+}
 .about {
   display: flex;
   align-items: flex-start;
-  /* padding: 8px 0px; */
   height: 13rem;
   min-height: 100%;
   text-indent: 2em;
   color: #fff;
   font-weight: lighter;
-  background-color: #5f7293;
+  background-image: linear-gradient(180deg, var(--color-1), var(--color-2));
   padding: 2rem 1rem 1rem;
   margin: 3.5rem auto;
   border-radius: 3rem;
   font-smooth: always;
   border: var(--border);
-  transition: var(--exit-transition);
+  transition: --color-1 0.5s ease-in, --color-2 0.5s ease-in,
+    box-shadow 0.5s ease-in, color 0.5s ease-in;
 }
 .wrapper div:first-of-type {
   margin-top: 0;
@@ -809,9 +818,11 @@ p {
 }
 .about:hover {
   color: #000;
-  background: #fff;
+  --color-1: #bbcaf6;
+  --color-2: #8294ba;
   box-shadow: var(--box-shadow);
-  transition: var(--enter-transition);
+  transition: --color-1 0.2s ease-out, --color-2 0.2s ease-out,
+    box-shadow 0.2s ease-out, color 0.2s ease-out;
   cursor: pointer;
 }
 .about:hover h2 {
