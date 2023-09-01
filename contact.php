@@ -4,7 +4,7 @@ $name = $_POST['cf_name'];
 $email = $_POST['cf_email'];
 $message = $_POST['cf_message'];
 
-$mailTo = 'training@easterbrook.at';
+$mailTo = 'sdl@easterbrook.at';
 $subject = 'Message from a site visitor '.$name;
 
 $body_message = 'From: '.$name."\n";
@@ -25,7 +25,7 @@ $mail_status = mail($mailTo, $subject, $body_message, $headers);
 }
 else { ?>
 	<script language="javascript" type="text/javascript">
-		alert('Nachricht fehlgeschlagen. Bitte senden Sie eine E-Mail an training@easterbrook.at');
+		alert('Nachricht fehlgeschlagen. Bitte senden Sie eine E-Mail an sdl@easterbrook.at');
 		window.location = 'index.html';
 	</script>
 <?php
