@@ -2,6 +2,7 @@
 
 $name = $_POST['cf_name'];
 $email = $_POST['cf_email'];
+$subject = $_POST['cf_subject'];
 $message = $_POST['cf_message'];
 
 $mailTo = 'sdl@easterbrook.at';
@@ -9,6 +10,7 @@ $subject = 'Message from a site visitor '.$name;
 
 $body_message = 'From: '.$name."\n";
 $body_message .= 'E-mail: '.$email."\n";
+$body_message .= 'Subject: '.$subject."\n";
 $body_message .= 'Message: '.$message;
 
 $headers = 'From: '.$name."\r\n";
