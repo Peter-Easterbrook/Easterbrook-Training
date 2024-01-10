@@ -1265,10 +1265,10 @@ textarea:active {
 .flip-card {
   display: flex;
   align-items: center;
-  margin: 1.2rem auto;
+  margin: 1rem auto;
   background-color: transparent;
-  width: 110px;
-  height: 110px;
+  width: 130px;
+  height: 130px;
   perspective: 1000px;
   cursor: url(img/glove2.png), auto;
 }
@@ -1298,7 +1298,7 @@ textarea:active {
 
 /* Style the front side (fallback if image is missing) */
 .shield-flip {
-  width: 110px;
+  width: 130px;
   height: auto;
   border-radius: 50%;
   filter: var(--filter);
