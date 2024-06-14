@@ -133,28 +133,34 @@ p {
 
 .placeholder-section {
   position: relative;
-  display: grid;
-  place-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   height: clamp(50vh, 40vw, 60vh);
   text-align: center;
   background: repeating-conic-gradient(ivory, #e3e0cf 20deg);
 }
 
 .title {
-  margin-top: clamp(1rem, 2vw, -20rem);
+  margin-top: 1rem;
+}
+.title h1 {
   font-size: clamp(2.3rem, 4vw, 4.5rem);
   overflow-wrap: break-word;
   hyphens: auto;
   text-align: center;
-  width: 60vw;
+  padding: 0;
+  margin: 0;
 }
 .subtitle {
-  font-size: clamp(1.5rem, 2vw, 3rem);
   width: 50vw;
+  font-size: clamp(1.5rem, 2vw, 3rem);
   overflow-wrap: break-word;
   hyphens: auto;
   text-align: center;
   font-style: italic;
+  margin-bottom: 4rem;
 }
 
 .shield-top {
@@ -1307,12 +1313,36 @@ textarea:active {
   transform: rotateY(180deg);
   cursor: url(img/glove2.png), auto;
 }
+@media screen and (max-width: 1800px) {
+  .subtitle {
+    width: 60vw;
+    margin-bottom: 2.4rem;
+  }
+}
+@media screen and (max-width: 1600px) {
+  .title {
+    margin-top: 2rem;
+  }
+  .subtitle {
+    margin-bottom: 3rem;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .title {
+    margin-top: 2.6rem;
+  }
+  .subtitle {
+    margin-bottom: 4rem;
+  }
+}
 
 @media screen and (max-width: 1200px) {
-  /* .placeholder-section {
-    display: grid;
-    place-items: center;
-  } */
+  .title {
+    margin-top: 2.4rem;
+  }
+  .subtitle {
+    margin-bottom: 3rem;
+  }
 
   .shield {
     transition: transform 1s;
@@ -1320,10 +1350,6 @@ textarea:active {
     width: 90px;
     height: auto;
   }
-
-  /* .grid-container {
-    grid-template-columns: repeat(2, 1fr);
-  } */
 }
 
 @media screen and (max-width: 1024px) {
@@ -1335,6 +1361,12 @@ textarea:active {
   html::-webkit-scrollbar {
     display: none;
   }
+  .title {
+    margin-top: 2rem;
+  }
+  .subtitle {
+    margin-bottom: 3rem;
+  }
 
   .shield {
     transition: transform 1s;
@@ -1345,12 +1377,6 @@ textarea:active {
   .priceCard {
     box-shadow: -0.6rem 0.4rem 0.6rem -0.6rem rgba(0, 0, 0, 0.3);
   }
-
-  /* .cards {
-    overflow-x: scroll;
-    overflow-y: hidden;
-    cursor: pointer;
-  } */
 
   .shield-flip {
     width: 80px;
@@ -1377,10 +1403,11 @@ textarea:active {
     color: #fffff0;
   }
   .title {
-    width: 100vw;
+    margin-top: 3rem;
   }
   .subtitle {
     width: 90vw;
+    margin-bottom: 4rem;
   }
 
   .shield {
@@ -1580,18 +1607,17 @@ textarea:active {
   }
 }
 @media screen and (max-width: 480px) {
-  .contactForm {
-    padding: 1rem;
+  .title {
+    margin-top: 1.6rem;
   }
-  /* input,
-  textarea {
-    border-radius: 2rem;
-    padding: 0.6rem 0.8rem;
-    margin: 0.4rem auto 0.7rem;
-    width: 90%;
-  } */
+  .subtitle {
+    margin-bottom: 3.4rem;
+  }
   .logo {
     width: 252px;
     height: 96px;
+  }
+  .contactForm {
+    padding: 1rem;
   }
 }
