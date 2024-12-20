@@ -10,7 +10,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Check if email is valid
     if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $mailTo = 'sdl@easterbrook.at';
+        $mailTo = 'training@easterbrook.at';
+
+        // $prefixed_subject = 'Message from a site visitor ' . $name; // Prefixed subject line
  
         $body_message = 'From: ' . $name . "\n";
         $body_message .= 'E-mail: ' . $email . "\n";

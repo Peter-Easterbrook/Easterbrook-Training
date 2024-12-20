@@ -653,14 +653,14 @@
               type="text"
               id="name"
               name="cf_name"
-              pattern="^[A-Za-z]+(\s[A-Za-z]+)?$"
+              pattern="^[A-Za-z\s]+$"
               required
             />
             <label for="name">Name:</label>
           </div>
           <div class="form-control">
             <input
-              type="text"
+              type="email"
               id="email"
               name="cf_email"
               pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
@@ -674,7 +674,7 @@
             <label for="subject">Betreff:</label>
           </div>
           <div class="form-control">
-            <input id="message" name="cf_message" required />
+            <input type="text" id="message" name="cf_message" required />
             <label for="message">Anfrage:</label>
           </div>
           <button
@@ -741,6 +741,7 @@
                 d="M47.62,345.628H8.963c-4.95,0-8.963,4.013-8.963,8.963s4.013,8.963,8.963,8.963H47.62c4.95,0,8.963-4.013,8.963-8.963
                   S52.57,345.628,47.62,345.628z"
               />
+              <g></g>
               <g></g>
               <g></g>
               <g></g>
