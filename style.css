@@ -338,20 +338,14 @@ p {
     overflow: hidden;
   }
 
-  .navLogo {
-    display: inline;
-    width: 50px;
-    height: 50px;
-    margin-left: 2rem;
-    vertical-align: middle;
-  }
   .site-nav ul {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     margin: 0;
     padding: 0;
     list-style: none;
+    width: 100%;
   }
   .site-nav li {
     display: inline-block;
@@ -360,23 +354,26 @@ p {
     overflow: hidden;
     transform-style: preserve-3d;
     transition: var(--exit-transition);
+    min-width: 120px;
+    text-align: center;
   }
 
   .site-nav .main-text {
     position: absolute;
     display: block;
-    transform: translateY(0%);
     padding-bottom: 1rem;
     color: #000;
-    margin-left: 2em;
+    left: 50%;
+    transform: translateX(-50%) translateY(0%);
     font-size: 1.2rem;
     font-weight: 400;
     text-shadow: var(--text-shadow);
     cursor: pointer;
     transition: var(--exit-transition);
+    white-space: nowrap;
   }
   .site-nav li:hover .main-text {
-    transform: translateY(-120%);
+    transform: translateX(-50%) translateY(-120%);
     transition: var(--enter-transition);
   }
   .site-nav li:hover a {
@@ -387,13 +384,14 @@ p {
 
   .site-nav li a {
     position: relative;
+    display: inline-block;
     transform: translateY(100%);
     padding: 0;
     color: #000;
-    margin-left: 2em;
     font-size: 1.2rem;
     font-weight: 700;
     cursor: pointer;
+    white-space: nowrap;
     /* transition: var(--exit-transition); */
   }
 

@@ -1,0 +1,8 @@
+# AI assistance files
+CLAUDE.md
+
+# Other common exclusions
+node_modules/
+.env
+.DS_Store
+*.log
