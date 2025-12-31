@@ -221,13 +221,14 @@
     </script>
 
     <!-- Custom JavaScript files (deferred for performance) -->
-    <script src="accordion.js" defer></script>
-    <script src="accordionMobile.js" defer></script>
-    <script src="scroll.js" defer></script>
-    <script src="gsap.js" defer></script>
+    <!-- GSAP (library) -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js" integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js" integrity="sha512-tHvUcUQYi35zApvAa5TNR3fNhBQkVtkmWKfacnpxmix4/VTGz1lGjIVyLMp7gLgAvg+aKJjnVKokXJNS5GZ+/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <!-- Custom CSS - loaded last to override external styles -->
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <!-- Serve concatenated + minified assets via bundle.php -->
+    <!-- Local static bundles (no PHP) -->
+    <link rel="stylesheet" href="bundle.min.css">
+    <script defer src="bundle.min.js"></script>
   </head>
   <body>
     <main id="main-content" class="page-sections">
@@ -775,7 +776,7 @@
               type="text"
               id="name"
               name="cf_name"
-              pattern="^[A-Za-z\s]+$"
+              pattern="^[A-Za-zÄÖÜäöüß\s]+$"
               required
             />
             <label for="name">Name:</label>
@@ -882,7 +883,8 @@
             </svg>
           </button>
         </form>
-        <script src="contact.js"></script>
+        <!-- contact.js temporarily disabled for debugging -->
+        <script defer src="contact.js"></script>
       </section>
 
       <footer class="placeholder-footer SVGBGLight">
@@ -910,18 +912,5 @@
         </div>
       </footer>
     </main>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"
-      integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"
-      integrity="sha512-tHvUcUQYi35zApvAa5TNR3fNhBQkVtkmWKfacnpxmix4/VTGz1lGjIVyLMp7gLgAvg+aKJjnVKokXJNS5GZ+/g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
   </body>
 </html>

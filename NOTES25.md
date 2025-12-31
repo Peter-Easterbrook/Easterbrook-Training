@@ -1,0 +1,28 @@
+# NOTES25 — Änderungen (30.12.2025)
+
+- ✅ Ziel: Einfaches, handgemachtes HTML/CSS/JS-Setup beibehalten
+- 🧩 Struktur
+  - index.html reverted to use local minified assets
+  - Added references to bundle.min.css and bundle.min.js (deferred)
+  - GSAP kept on CDN (deferred) for animations
+- ⚡ Performance
+  - JS files concatenated/minified into bundle.min.js
+  - CSS minified into bundle.min.css
+  - Scripts loaded with defer to avoid render-blocking
+- 🔧 Code affected
+  - accordion.js, accordionMobile.js, scroll.js, gsap.js and style.css were consolidated into minified bundles
+  - contact.js remains as a deferred asset
+- 🔒 Hardening PHP validation.
+  - contact.php: added server-side hardening and validation:
+    - rejects non-POST requests
+    - trims inputs and uses strip_tags for basic sanitization
+    - validates email format and enforces length limits (name, subject, message)
+    - protects against header injection (rejects CR/LF in inputs)
+    - safer mail headers: From = no-reply@domain, Reply-To = user email, proper MIME/charset
+    - wordwrap to 998 chars and simple success/failure alerts back to the user
+- 📌 Dev workflow
+  - Local editing: use Live Server / open index.html (no server-side tooling required)
+  - Keep original source files (for readability) and edit them; regenerate bundles if needed
+- 📝 Next steps (optional)
+  - Add simple build script or keep manual minified files in repo
+  - Add source maps for easier debugging if desired
