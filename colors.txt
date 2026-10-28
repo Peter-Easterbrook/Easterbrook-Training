@@ -1,0 +1,78 @@
+{
+  "colorsByHex": [
+    { "hex": "#000000", "name": "black", "sourceForms": ["#000", "black"] },
+    { "hex": "#1f2937", "name": "privacy text" },
+    { "hex": "#3d526e", "name": "dark blue" },
+    { "hex": "#43464b", "name": "scrollbar thumb" },
+    { "hex": "#464655", "name": "dark gray" },
+    { "hex": "#4b6587", "name": "accent blue" },
+    { "hex": "#4e6280", "name": "blue" },
+    { "hex": "#5bbad5", "name": "browser theme accent" },
+    { "hex": "#5f7293", "name": "blue" },
+    { "hex": "#7083a6", "name": "blue" },
+    { "hex": "#8294ba", "name": "blue" },
+    { "hex": "#917948", "name": "browser theme accent" },
+    { "hex": "#95a6cd", "name": "blue" },
+    { "hex": "#a8b8e2", "name": "blue" },
+    { "hex": "#add8e6", "name": "light blue", "sourceForms": ["lightblue"] },
+    { "hex": "#bbcaf6", "name": "light blue" },
+    { "hex": "#cccccc", "name": "gray", "sourceForms": ["#ccc"] },
+    { "hex": "#cdc8aa", "name": "warm gray" },
+    { "hex": "#d5d1b5", "name": "warm gray" },
+    { "hex": "#dddac1", "name": "warm gray" },
+    { "hex": "#e3e0cf", "name": "warm gray" },
+    { "hex": "#e5e3cd", "name": "warm gray" },
+    { "hex": "#eeedd8", "name": "warm gray" },
+    { "hex": "#f6f6e4", "name": "warm off-white" },
+    { "hex": "#fffff0", "name": "ivory", "sourceForms": ["#fffff0", "ivory"] },
+    { "hex": "#fffff7", "name": "page background" },
+    { "hex": "#ffffff", "name": "white", "sourceForms": ["#fff", "white"] }
+  ],
+  "otherColorValues": [
+    "transparent",
+    "rgba(255, 255, 255, 0.5)",
+    "rgba(0, 0, 0, 0.3)",
+    "rgba(0, 0, 0, 0.4)",
+    "rgba(0, 0, 0, 0.6)",
+    "hsl(var(--shadow-color) / 0.075), where --shadow-color is 0deg 0% 0%",
+    "hsl(var(--shadow-color-light) / 0.075), where --shadow-color-light is 0deg 0% 100%"
+  ],
+  "gradients": [
+    {
+      "selectors": [".placeholder-section"],
+      "css": "repeating-conic-gradient(ivory, #e3e0cf 20deg)"
+    },
+    {
+      "selectors": [".priceCard", ".impressum", ".accContainerMobile"],
+      "css": "linear-gradient(180deg, #fffff0, #f6f6e4, #eeedd8, #e5e3cd, #dddac1, #d5d1b5, #cdc8aa)"
+    },
+    {
+      "selectors": [".section-title"],
+      "css": "linear-gradient(0deg, #3d526e, #4e6280, #5f7293, #7083a6, #8294ba, #95a6cd, #a8b8e2, #bbcaf6, #a8b8e2, #95a6cd, #8294ba, #7083a6, #5f7293, #4e6280, #3d526e)"
+    },
+    {
+      "selectors": [".section-title.light"],
+      "css": "linear-gradient(180deg, #cdc8aa, #d5d1b5, #dddac1, #e5e3cd, #eeedd8, #f6f6e4, #fffff0, #f6f6e4, #eeedd8, #e5e3cd, #dddac1, #d5d1b5, #cdc8aa)"
+    },
+    {
+      "selectors": [".accContainer"],
+      "css": "linear-gradient(180deg, #bbcaf6, #a8b8e2, #95a6cd, #8294ba, #7083a6, #5f7293, #4e6280, #3d526e)"
+    },
+    {
+      "selectors": [".wrapper::-webkit-scrollbar-thumb"],
+      "css": "linear-gradient(90deg, #3d526e, #4e6280, #5f7293, #7083a6, #8294ba, #95a6cd, #a8b8e2, #bbcaf6, #a8b8e2, #95a6cd, #8294ba, #7083a6, #5f7293, #4e6280, #3d526e)"
+    },
+    {
+      "selectors": [".about"],
+      "css": "linear-gradient(180deg, var(--color-1), var(--color-2))",
+      "variables": {
+        "--color-1": "#bbcaf6",
+        "--color-2": "#8294ba"
+      }
+    },
+    {
+      "selectors": [".contactForm", ".custom-btn"],
+      "css": "linear-gradient(0deg, #3d526e, #4e6280, #5f7293, #7083a6, #8294ba, #95a6cd, #a8b8e2, #bbcaf6)"
+    }
+  ]
+}
