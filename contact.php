@@ -62,34 +62,8 @@ $headers .= "Content-Type: text/plain; charset=utf-8\r\n";
 $additional_parameters = '-f' . $hostFrom;
 $sent = mail($to, $subject, $body, $headers, $additional_parameters);
 
-// Log explicitly using $hostFrom so "from=" is never empty
-$logLine = sprintf(
-    "%s POST=%s to=%s sent=%d err=%s from=%s replyto=%s\n",
-    date('c'),
-    json_encode($_POST, JSON_UNESCAPED_UNICODE),
-    $to,
-    $sent ? 1 : 0,
-    json_encode(error_get_last()),
-    $hostFrom,
-    $email
-);
-
-$written = false;
-// try project log
-$projLog = __DIR__ . '/mail.log';
-if (@is_writable(__DIR__) || file_exists($projLog) || @touch($projLog)) {
-    $written = (bool) file_put_contents($projLog, $logLine, FILE_APPEND | LOCK_EX);
-    error_log("contact.php: write to {$projLog} -> " . ($written ? 'OK' : 'FAILED'));
-}
-
-// always attempt system temp
-$tempLog = sys_get_temp_dir() . '/mail-debug.log';
-$tempWritten = (bool) file_put_contents($tempLog, $logLine, FILE_APPEND | LOCK_EX);
-error_log("contact.php: write to {$tempLog} -> " . ($tempWritten ? 'OK' : 'FAILED'));
-
-// fallback to error_log if file writes failed
-if (!$written && !$tempWritten) {
-    error_log("contact.php: logging fallback: " . $logLine);
+if (!$sent) {
+    error_log('contact.php: mail() failed: ' . json_encode(error_get_last()));
 }
 
 if ($sent) {

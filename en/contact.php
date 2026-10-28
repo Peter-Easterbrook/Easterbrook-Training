@@ -1,55 +1,70 @@
 <?php
+// Simple hardening: input limits, header-injection protection, proper From header, basic sanitization.
 
-// Check if the form was submitted
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Sanitize and validate user input
-    $name = filter_var($_POST['cf_name'], FILTER_SANITIZE_STRING);
-    $email = filter_var($_POST['cf_email'], FILTER_SANITIZE_EMAIL);
-    $subject = filter_var($_POST['cf_subject'], FILTER_SANITIZE_STRING);
-    $message = filter_var($_POST['cf_message'], FILTER_SANITIZE_STRING);
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    http_response_code(405);
+    exit;
+}
 
-    // Check if email is valid
-    if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $mailTo = 'training@easterbrook.at';
+function fail_redirect($msg) {
+    $js = "alert('" . addslashes($msg) . "'); window.location='index.html';";
+    echo "<script>{$js}</script>";
+    exit;
+}
 
-        // $prefixed_subject = 'Message from a site visitor ' . $name; // Prefixed subject line
+// Read raw inputs
+$raw_name    = $_POST['cf_name']    ?? '';
+$raw_email   = $_POST['cf_email']   ?? '';
+$raw_subject = $_POST['cf_subject'] ?? '';
+$raw_message = $_POST['cf_message'] ?? '';
 
-        $body_message = 'From: ' . $name . "\n";
-        $body_message .= 'E-mail: ' . $email . "\n";
-        $body_message .= 'Subject: ' . $subject . "\n";
-        $body_message .= 'Message: ' . $message;
+// Basic trim + strip tags
+$name    = trim(strip_tags($raw_name));
+$email   = trim($raw_email);
+$subject = trim(strip_tags($raw_subject));
+$message = trim(strip_tags($raw_message));
 
-        $headers = 'From: ' . $name . "\r\n";
-        $headers .= 'Reply-To: ' . $email . "\r\n";
-
-        // Attempt to send the email
-        $mail_status = mail($mailTo, $subject, $body_message, $headers);
-
-        if ($mail_status) {
-            // Send a success message to the user
-            echo '<script language="javascript" type="text/javascript">
-                alert("Thank you for your message. We will contact you shortly.");
-                window.location = "index.html";
-            </script>';
-        } else {
-            // Send a failure message to the user
-            echo '<script language="javascript" type="text/javascript">
-                alert("Message failed. Please send an email to sdl@easterbrook.at");
-                window.location = "index.html";
-            </script>';
-        }
-    } else {
-        // Invalid email, send a message to the user
-        echo '<script language="javascript" type="text/javascript">
-            alert("Invalid email address. Please check your input.");
-            window.location = "index.html";
-        </script>';
+// Protect against header injection
+foreach ([$name, $email, $subject] as $v) {
+    if (preg_match("/[\r\n]/", $v)) {
+        fail_redirect('Invalid input.');
     }
+}
+
+// Length limits & validation
+if ($name === '' || mb_strlen($name) > 100)       fail_redirect('Please enter a valid name (max 100 characters).');
+if (!filter_var($email, FILTER_VALIDATE_EMAIL))   fail_redirect('Invalid email address. Please check your input.');
+if ($subject === '' || mb_strlen($subject) > 150) fail_redirect('Please enter a valid subject (max 150 characters).');
+if ($message === '' || mb_strlen($message) > 5000) fail_redirect('Please enter a message (max 5000 characters).');
+
+// Prepare mail
+$to = 'training@easterbrook.at';
+
+$body  = "From: {$name}\n";
+$body .= "E-mail: {$email}\n";
+$body .= "Subject: {$subject}\n\n";
+$body .= "Message: {$message}\n";
+$body = wordwrap($body, 998);
+
+// Must be a valid mailbox on the hosting account
+$hostFrom = 'sdl@easterbrook.at';
+
+// Build headers using $hostFrom and user in Reply-To
+$headers  = "From: Easterbrook Website <{$hostFrom}>\r\n";
+$headers .= "Reply-To: {$email}\r\n";
+$headers .= "MIME-Version: 1.0\r\n";
+$headers .= "Content-Type: text/plain; charset=utf-8\r\n";
+
+// send with envelope sender to improve deliverability
+$sent = mail($to, $subject, $body, $headers, '-f' . $hostFrom);
+
+if (!$sent) {
+    error_log('en/contact.php: mail() failed: ' . json_encode(error_get_last()));
+}
+
+if ($sent) {
+    echo '<script>alert("Thank you for your message. We will contact you shortly."); window.location="index.html";</script>';
 } else {
-    // Handle cases where the form wasn't submitted
-    echo '<script language="javascript" type="text/javascript">
-        alert("The form was not submitted properly.");
-        window.location = "index.html";
-    </script>';
+    echo '<script>alert("Message failed. Please send an email to sdl@easterbrook.at"); window.location="index.html";</script>';
 }
 ?>
