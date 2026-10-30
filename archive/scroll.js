@@ -17,3 +17,8 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     });
   });
 });
+
+// Footer year (static fallback in the HTML)
+document.querySelectorAll('.year').forEach((el) => {
+  el.textContent = new Date().getFullYear();
+});
