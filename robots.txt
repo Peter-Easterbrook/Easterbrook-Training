@@ -33,3 +33,5 @@ Disallow: /*.avif$
 Disallow: /*.bmp$
 Disallow: /*.svg$
 Disallow: /*.ico$
+
+Sitemap: https://www.easterbrook.at/sitemap.xml
