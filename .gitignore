@@ -6,3 +6,5 @@ node_modules/
 .env
 .DS_Store
 *.log
+# SFTP extension config (server login details)
+.vscode/sftp.json
