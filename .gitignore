@@ -8,3 +8,6 @@ node_modules/
 *.log
 # SFTP extension config (server login details)
 .vscode/sftp.json
+
+# Local upload instructions (names the server account)
+upload-instructions.txt
